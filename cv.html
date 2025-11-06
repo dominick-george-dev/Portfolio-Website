@@ -39,14 +39,27 @@
 
                 <h1 class="page-title">CV</h1>
             
-                <div class="img-container">
-                    <img src="static/imgs/cv1.png", width="80%" height="40%">
-                    <img src="static/imgs/cv2.png", width="80%" height="40%">
-                    <img src="static/imgs/cv3.png", width="80%" height="40%">
-                    <img src="static/imgs/cv4.png", width="80%" height="40%">
-                    <img src="static/imgs/cv5.png", width="80%" height="40%">
-                    <img src="static/imgs/cv6.png", width="80%" height="40%">
-                    <img src="static/imgs/cv7.png", width="80%" height="40%">
+                <div class="cv-container">
+                    <div class="cv-viewer-wrapper">
+                        <iframe 
+                            src="static/documents/cv.pdf#toolbar=1&navpanes=1&scrollbar=1" 
+                            class="cv-pdf-viewer"
+                            type="application/pdf"
+                            title="Dominick George CV"
+                            allow="fullscreen">
+                            <div class="cv-fallback">
+                                <p>Your browser does not support embedded PDFs.</p>
+                                <a href="static/documents/cv.pdf" class="cv-download-link" download>
+                                    <i class="fas fa-download"></i> Download CV (PDF)
+                                </a>
+                            </div>
+                        </iframe>
+                    </div>
+                    <div class="cv-download-container">
+                        <a href="static/documents/cv.pdf" class="cv-download-button" download>
+                            <i class="fas fa-download"></i> Download CV (PDF)
+                        </a>
+                    </div>
                 </div>
             </div>
         </main>
@@ -56,13 +69,14 @@
             </div>
             <div class="contact-info">
                 <ul>
-                    <li><a href="#" class="phone-no">(UK)+44 7727 290359</a></li>
-                    <li><a href="#" class="seperator">/</a></li>
+                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
+                    <li><span class="seperator">/</span></li>
                     <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
                 </ul>
             </div>
         </footer>
         <script src="static/js/main.js"></script>
+        <script src="static/js/cv-viewer.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>

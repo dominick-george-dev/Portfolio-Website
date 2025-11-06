@@ -4,18 +4,276 @@
     text-align: center;
 }
 
+.page-contents {
+    min-height: calc(100vh - 200px);
+    padding-bottom: 100px;
+}
+
 .main-container{
     padding-top: 200px;
+    padding-bottom: 150px;
+    min-height: calc(100vh - 200px);
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .page-title {
     color: #c21043;
     text-decoration: underline;
     text-align: center;
-    padding-bottom: 8%;
+    padding-bottom: 5%;
     font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(194, 16, 67, 0.3);
+    animation: fadeInUp 0.8s ease-out;
 }
 
-.img-container {
-    padding-bottom: 20%;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    animation: fadeIn 1s ease-out 0.2s backwards;
+}
+
+.cv-viewer-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    height: 80vh;
+    min-height: 600px;
+    background: rgba(194, 16, 67, 0.05);
+    border: 2px solid rgba(194, 16, 67, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.cv-viewer-wrapper:hover {
+    border-color: #c21043;
+    box-shadow: 0 12px 32px rgba(194, 16, 67, 0.4);
+}
+
+.cv-pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+
+.cv-download-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cv-download-button, .cv-download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: rgba(194, 16, 67, 0.1);
+    border: 2px solid #c21043;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cv-download-button:hover, .cv-download-link:hover {
+    background: #c21043;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(194, 16, 67, 0.4);
+    color: #fff;
+}
+
+.cv-download-button i, .cv-download-link i {
+    font-size: 1.2rem;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 1024px) {
+    .cv-viewer-wrapper {
+        height: 70vh;
+        min-height: 500px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-title {
+        font-size: 40px;
+        padding-bottom: 5%;
+    }
+
+    .cv-container {
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .cv-viewer-wrapper {
+        height: 60vh;
+        min-height: 400px;
+        padding: 10px;
+    }
+
+    .cv-download-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-title {
+        font-size: 32px;
+        padding-bottom: 3%;
+    }
+
+    .cv-container {
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .cv-viewer-wrapper {
+        height: 50vh;
+        min-height: 350px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .cv-pdf-viewer {
+        border-radius: 4px;
+    }
+
+    .cv-download-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+/* For very small screens, provide alternative mobile-friendly view */
+@media screen and (max-width: 360px) {
+    .cv-viewer-wrapper {
+        height: 45vh;
+        min-height: 300px;
+    }
+}
+
+/* Mobile-first: Show download button more prominently on small screens */
+@media screen and (max-width: 768px) {
+    .cv-download-container {
+        margin-top: 15px;
+    }
+    
+    .cv-download-button {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Ensure PDF viewer is accessible */
+.cv-pdf-viewer {
+    display: block;
+}
+
+/* Loading state */
+.cv-viewer-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(194, 16, 67, 0.3);
+    border-top-color: #c21043;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+.cv-viewer-wrapper.loading::before {
+    display: block;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Fallback styling if PDF doesn't load */
+.cv-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 40px;
+    background: rgba(194, 16, 67, 0.1);
+    border-radius: 8px;
+}
+
+.cv-fallback p {
+    color: #fff;
+    padding: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cv-fallback .cv-download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: rgba(194, 16, 67, 0.1);
+    border: 2px solid #c21043;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cv-fallback .cv-download-link:hover {
+    background: #c21043;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(194, 16, 67, 0.4);
 }

@@ -48,7 +48,6 @@ menu.addEventListener("wheel", (e) => {
       rotation = Math.floor(accumulatedDeltaY / threshold) * increment;
     }
 
-    console.log(rotation);
     angle = angle + rotation;
 
     let iterator = angle;

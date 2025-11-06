@@ -5,6 +5,16 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .tabs-item {
@@ -12,8 +22,23 @@
 }
 
 .tabs__label {
-    padding: 10px 16px;
+    padding: 12px 24px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+    position: relative;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(194, 16, 67, 0.05);
+    border: 1px solid rgba(194, 16, 67, 0.2);
+    border-bottom: none;
+}
+
+.tabs__label:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(194, 16, 67, 0.15);
+    transform: translateY(-2px);
 }
 
 .tabs__radio {
@@ -24,25 +49,84 @@
     order: 1;
     width: 100%;
     display: none;
+    padding: 30px;
+    background: rgba(194, 16, 67, 0.05);
+    border: 1px solid rgba(194, 16, 67, 0.2);
+    border-radius: 0 12px 12px 12px;
+    margin-top: -1px;
+    animation: fadeInContent 0.4s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .tabs__radio:checked+.tabs__label {
     font-weight: bold;
     color: #c21043;
     border-bottom: 2px solid #c21043;
+    background: rgba(194, 16, 67, 0.2);
+    border-color: #c21043;
+    box-shadow: 0 4px 12px rgba(194, 16, 67, 0.3);
 }
+
 .tabs__radio:checked+.tabs__label+.tabs__content {
     display: initial;
 }
 
+.page-contents {
+    min-height: calc(100vh - 200px);
+    padding-bottom: 100px;
+}
+
 .main-container{
     padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+.project-overview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: fadeIn 1s ease-out 0.4s backwards;
+}
+
+.page-contents {
+    padding-bottom: 100px;
 }
 
 .intro-text {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     padding-bottom: 50px;
+    padding-top: 200px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .projects-title {
@@ -52,16 +136,20 @@
     font-size: 50px;
     text-align: center;
     border-top: solid;
-    border-color: white;
+    border-color: rgba(255, 255, 255, 0.2);
     padding-top: 50px;
     text-decoration: underline;
     padding-bottom: 50px;
+    text-shadow: 0 2px 10px rgba(194, 16, 67, 0.3);
+    animation: fadeIn 1s ease-out 0.2s backwards;
 }
 
 .car-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 30px 0;
+    animation: fadeIn 1s ease-out 0.4s backwards;
 }
 
 .project-img-container {
@@ -92,29 +180,64 @@
 
 .project-img {
     margin-bottom: 60px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.project-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(194, 16, 67, 0.4);
 }
 
 .list-text {
     text-align: center;
     padding: 20px;
     font-size: 25px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .projects-list {
     padding: 20px;
+    list-style: none;
+}
+
+.projects-list h3 {
+    color: #c21043;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(194, 16, 67, 0.3);
+}
+
+.projects-list h3:first-child {
+    margin-top: 0;
 }
 
 .projects-list-item{
     padding: 15px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.projects-list-item:hover {
+    background: rgba(194, 16, 67, 0.1);
+    transform: translateX(10px);
+    padding-left: 25px;
 }
 
 .projects-list li a {
     color: #fff;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 1.1rem;
 }
 
 .projects-list li a:hover {
-    color:#c21043;
-    transition: 0.3s;
+    color: #c21043;
+    text-shadow: 0 0 10px rgba(194, 16, 67, 0.5);
 }
 
 .info-text {
@@ -125,6 +248,9 @@
     text-align: center;
     padding-top: 20px;
     font-size: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    animation: fadeIn 1s ease-out 0.6s backwards;
 }
 
 .project-text, .languages-list-label, .languages-list {
@@ -137,6 +263,34 @@
 .project-text {
     margin-left: 100px;
     margin-right: 100px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.languages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.languages-list-item {
+    padding: 12px 24px;
+    background: rgba(194, 16, 67, 0.1);
+    border: 1px solid rgba(194, 16, 67, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.languages-list-item:hover {
+    background: rgba(194, 16, 67, 0.2);
+    border-color: #c21043;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(194, 16, 67, 0.3);
 }
 
 .git-link-container {
@@ -148,11 +302,21 @@
 .git-link {
     color: #c21043;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: 2px solid #c21043;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    background: rgba(194, 16, 67, 0.1);
 }
 
 .git-link:hover {
-    color: #cc8c0b;
-    transition: 0.3s;
+    color: #fff;
+    background: #c21043;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(194, 16, 67, 0.4);
     text-decoration: none;
 }
 
@@ -180,6 +344,19 @@ footer {
     .gallery {
         width: 500px;
     }
+
+    .tabs {
+        margin-left: 5%;
+    }
+
+    .tabs__label {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .tabs__content {
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -195,5 +372,19 @@ footer {
     .project-text {
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    .tabs {
+        margin-left: 2%;
+    }
+
+    .tabs__label {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        margin-right: 2px;
+    }
+
+    .projects-title {
+        font-size: 32px;
     }
 }
