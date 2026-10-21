@@ -1,117 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>About Me Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link href="static/styles/base.css" rel="stylesheet" type="text/css">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="icon" href="static/imgs/cv_logo.png" type="image/x-icon"/>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
-        <link href="static/styles/carousel.css" rel="stylesheet" type="text/css">
-        <link href="static/styles/about.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <header class="header">
-            <nav class="navbar">
-                <div class="logo">
-                    <p class="logo-text">Dominick George</p>
-                </div>
-
-                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                </button>
-
-                <div class="menu">
-                    <ul class="navbar-links-list">
-                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
-                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
-                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
-                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
-                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="page-contents">
-            <div class="main-container">
-                <div class="about-me-overview">
-                    <div class="about-me-container">
-            
-                        <h1 class="about-me-title">About Me Page</h1>
-            
-                        <p class="about-me-text">
-                            Energetic and hardworking 2nd year Cardiff University Student working towards a BSc in Applied
-                            Software Engineering. I currently live in Cardiff and I am originally from Talgarth, Wales.
-                            <br>
-                            <br>
-                            I have been coding for 3+ years creating a variety of projects to explore my interest of software development.
-                        </p>
-            
-                        <h3 class="sub-heading">Hobbies: </h3>
-            
-                        <ul class="hobbies-list">
-                            <li class="hobbies-list-item">Coding</li>
-                            <li class="hobbies-list-item">Djing</li>
-                            <li class="hobbies-list-item">Working out</li>
-                            <li class="hobbies-list-item">Working on cars</li>
-                            <li class="hobbies-list-item">Gaming</li>
-                            <li class="hobbies-list-item">Football</li>
-                            <li class="hobbies-list-item">Rugby</li>
-                            <li class="hobbies-list-item">Basketball</li>
-                            <li class="hobbies-list-item">Motorsport</li>
-                        </ul>
-            
-                        <h3 class="sub-heading">Extra Curricular Activities: </h3>
-            
-                        <p class="about-me-text">
-                            In my free time I enjoy working on my own personal projects as I can learn new areas of software development whilst applying my knowledge. I am a member of the Cybersecurity Society which allows me to collaborate and network with like-minded people. However, I do enjoy playing sports, in university I have joined the Medics Basketball Society. This is because I enjoy the team aspect of the sport and helped me develop other skills (teamwork, communication, etc). 
-                        </p>
-            
-                        <h3 class="sub-heading">Future Goals:</h3>
-            
-                        <p class="about-me-text">
-                            My future aspirations for my career is to create an impact within the industry. Whether this is developing the next big AI project that will change how the industry develops and deploys projects, to a smaller project that will improve the work-life balance of software engineers. I am looking forward to see how the industry changes over the life-cycle of my career because I understand that this industry is constantly developing.
-                            <br><br>
-                            I would prefer to work in a smaller company rather than a bigger company as I feel like I can contribute more to the project as you work closer with management. However, I would be equally as excited to work for a bigger company as I can see how bigger projects are developed with a bigger team.
-                        </p>
-                    </div>
-                    <div class="gallery-wrap">
-                        <img src="static/imgs/back.png" id="backBtn">  
-                        <div class="gallery">         
-                                <div class="about-img-container">
-                                    <span><img src="static/imgs/dom2.JPG" width="350px" height="600px" alt="Me eating an apple in Greece wearing my Japanese football top."></span>
-                                </div>
-                                <div class="about-img-container">
-                                    <span><img src="static/imgs/dom.JPG" width="350px" height="600px" alt="Me eating an apple in Greece wearing my Japanese football top."></span>
-                                </div>
-                                <div class="about-img-container">
-                                    <span><img src="static/imgs/dom3.JPG" width="350px" height="600px" alt="Me eating an apple in Greece wearing my Japanese football top."></span>
-                                </div>
-                        </div>
-                        <img src="static/imgs/next.png" id="nextBtn">  
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer class="base-footer">
-            <div class="footer-container">
-                <p class="footer-text">Dominick George 2024</p>
-            </div>
-            <div class="contact-info">
-                <ul>
-                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
-                    <li><span class="seperator">/</span></li>
-                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>About · Dominick George</title>
+    <meta name="description" content="Software engineering graduate (2:1) studying the MSc Cyber Security and Technology at Cardiff University: education, skills and the roles I&#x27;m looking for.">
+    <meta name="author" content="Dominick George">
+    <link rel="canonical" href="https://domgeorge.dev/about.html">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Dominick George">
+    <meta property="og:title" content="About · Dominick George">
+    <meta property="og:description" content="Software engineering graduate (2:1) studying the MSc Cyber Security and Technology at Cardiff University: education, skills and the roles I&#x27;m looking for.">
+    <meta property="og:url" content="https://domgeorge.dev/about.html">
+    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#c21043">
+    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <link href="/static/styles/carousel.css" rel="stylesheet">
+    <link href="/static/styles/about.css" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar" aria-label="Main">
+            <a href="/" class="logo">Dominick George</a>
+            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+            <div class="menu" id="primaryMenu">
+                <ul class="navbar-links-list">
+                    <li><a href="/" class="url-link">Home</a></li>
+                    <li><a href="/about.html" class="url-link" aria-current="page">About</a></li>
+                    <li><a href="/projects.html" class="url-link">Projects</a></li>
+                    <li><a href="/cv.html" class="url-link">CV</a></li>
+                    <li><a href="/contact.html" class="url-link">Contact</a></li>
                 </ul>
             </div>
-        </footer>
-        <script src="static/js/img_slider.js"></script>
-        <script src="static/js/main.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
-    </body>
+        </nav>
+    </header>
+    <main id="main" class="page-contents">
+        <div class="container">
+            <header class="page-header fade-in-up">
+                <p class="eyebrow">About me</p>
+                <h1 class="page-title">Building software, now specialising in securing it</h1>
+                <p class="lead">
+                    I'm a Cardiff-based software engineer, originally from Talgarth in mid Wales. I graduated from
+                    Cardiff University in 2026 with a 2:1 in Applied Software Engineering, and I'm now studying for
+                    the NCSC-certified MSc in Cyber Security and Technology there, graduating in July 2027.
+                </p>
+            </header>
+
+            <div class="about-layout">
+                <div class="about-content">
+                    <section class="about-section" aria-labelledby="path-heading">
+                        <h2 id="path-heading">My path so far</h2>
+                        <p>
+                            I started programming at school through GCSE and A-level Computer Science. My A-level project,
+                            a Python and SQLite app for my mum's camping business, is what convinced me to become a
+                            software engineer.
+                        </p>
+                        <p>
+                            My degree taught me to ship software with other people: Agile client projects such as an
+                            applicant-tracking system for <strong>NHS Wales</strong>, automated builds and tests in CI
+                            pipelines, and full-stack work in Java/Spring Boot, Python/Flask and React/Node.js. Alongside it I
+                            helped found <strong>Cardiff Autonomous Racing</strong>, where I led the path-planning team and
+                            built the ROS 2 module that plans the car's racing line.
+                        </p>
+                        <p>
+                            The work I enjoyed most was the security side: hashing and salting passwords, adding two-factor
+                            authentication, preventing SQL injection. That's why I chose the MSc. I want to be the engineer
+                            who builds the feature <strong>and</strong> understands how it could be attacked.
+                        </p>
+                    </section>
+
+                    <section class="about-section" aria-labelledby="looking-heading">
+                        <h2 id="looking-heading">What I'm looking for</h2>
+                        <p>
+                            Graduate or junior roles in <strong>application and product security</strong> or
+                            <strong>full-stack software engineering</strong>, ideally where the two overlap: building
+                            secure-by-design web applications and helping teams catch vulnerabilities before they ship.
+                            I'm looking for roles starting after I graduate in summer 2027, based in Cardiff and open to
+                            roles across the UK and remote.
+                        </p>
+                    </section>
+
+                    <section class="about-section" aria-labelledby="education-heading">
+                        <h2 id="education-heading">Education</h2>
+                        <ol class="education-list">
+                            <li class="education-item">
+                                <h3>MSc Cyber Security and Technology</h3>
+                                <p class="education-meta">Cardiff University &middot; September 2026 &ndash; July 2027</p>
+                                <p>NCSC-certified programme developed with PwC. Core modules: Penetration Testing and Malware Analysis; Application and System Security; Applied Cryptography and Infrastructure Security; Operating Systems Security; Computer and Network Forensics; Cyber Security and Risk Management; plus a 60-credit dissertation.</p>
+                            </li>
+                            <li class="education-item">
+                                <h3>BSc Applied Software Engineering</h3>
+                                <p class="education-meta">Cardiff University &middot; 2023 &ndash; 2026 &middot; 2:1</p>
+                                <p>Modules included Web Development, Object-Oriented Programming, DevOps, Database Management Systems, Commercial Applications of Java and Mobile Development.</p>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section class="about-section" aria-labelledby="skills-heading">
+                        <h2 id="skills-heading">Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skills-group">
+                                <h3>Languages</h3>
+                                <ul class="languages-list">
+                                    <li class="languages-list-item">Python</li>
+                                    <li class="languages-list-item">Java</li>
+                                    <li class="languages-list-item">JavaScript</li>
+                                    <li class="languages-list-item">C++</li>
+                                    <li class="languages-list-item">SQL</li>
+                                    <li class="languages-list-item">HTML &amp; CSS</li>
+                                </ul>
+                            </div>
+                            <div class="skills-group">
+                                <h3>Frameworks &amp; libraries</h3>
+                                <ul class="languages-list">
+                                    <li class="languages-list-item">Spring Boot</li>
+                                    <li class="languages-list-item">Spring Security</li>
+                                    <li class="languages-list-item">Thymeleaf</li>
+                                    <li class="languages-list-item">Flask</li>
+                                    <li class="languages-list-item">React</li>
+                                    <li class="languages-list-item">Node.js</li>
+                                    <li class="languages-list-item">Express</li>
+                                    <li class="languages-list-item">REST APIs</li>
+                                    <li class="languages-list-item">ROS 2</li>
+                                    <li class="languages-list-item">SciPy</li>
+                                </ul>
+                            </div>
+                            <div class="skills-group">
+                                <h3>Security</h3>
+                                <ul class="languages-list">
+                                    <li class="languages-list-item">Password hashing (bcrypt)</li>
+                                    <li class="languages-list-item">TOTP two-factor auth</li>
+                                    <li class="languages-list-item">JWT authentication</li>
+                                    <li class="languages-list-item">Symmetric encryption (Fernet)</li>
+                                    <li class="languages-list-item">SQL injection prevention</li>
+                                    <li class="languages-list-item">Content Security Policy</li>
+                                    <li class="languages-list-item">Hack The Box Academy</li>
+                                </ul>
+                            </div>
+                            <div class="skills-group">
+                                <h3>Data &amp; tooling</h3>
+                                <ul class="languages-list">
+                                    <li class="languages-list-item">MySQL / MariaDB</li>
+                                    <li class="languages-list-item">SQLite</li>
+                                    <li class="languages-list-item">MongoDB</li>
+                                    <li class="languages-list-item">Git, GitHub &amp; GitLab CI</li>
+                                    <li class="languages-list-item">Gradle</li>
+                                    <li class="languages-list-item">Checkstyle</li>
+                                    <li class="languages-list-item">Agile</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="about-section" aria-labelledby="beyond-heading">
+                        <h2 id="beyond-heading">Beyond the code</h2>
+                        <p>
+                            I've been part of Cardiff University's Cybersecurity Society and the Medics Basketball Society.
+                            I've worked through Hack The Box Academy modules on web requests, web applications and Linux
+                            fundamentals, and attended the <em>Business Transformation in the Age of AI</em> conference in
+                            Bristol. I speak English fluently and Welsh at an intermediate level.
+                        </p>
+                        <p>Outside of that you'll usually find me watching motorsport, working on cars, playing football or basketball, or DJing.</p>
+                    </section>
+                </div>
+
+                <aside class="about-photos" aria-label="Photos">
+                    <figure class="about-headshot">
+                        <img src="/static/imgs/headshot.webp" alt="Headshot of Dominick wearing a Cardiff Autonomous Racing team shirt, in front of a Formula Student sponsor board." width="400" height="400" decoding="async">
+                    </figure>
+                    <p class="about-photos-label">Away from the desk</p>
+                    <div class="gallery-wrap">
+                        <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Previous photo"><img src="/static/imgs/back.png" alt="" width="90" height="90"></button>
+                        <div class="gallery" tabindex="0" aria-label="Photos of Dominick (scrollable)">
+                            <div><img src="/static/imgs/dom-1.webp" alt="Dominick crouching on a rocky beach beside a husky, with the sea behind them." width="800" height="1067" decoding="async" loading="lazy"></div>
+                            <div><img src="/static/imgs/dom-3.webp" alt="Dominick sitting at a desk in front of a computer monitor, wearing a yellow football shirt." width="800" height="1422" decoding="async" loading="lazy"></div>
+                            <div><img src="/static/imgs/dom-2.webp" alt="Dominick on holiday in Greece, wearing a Japan football shirt and eating at an outdoor table." width="800" height="1422" decoding="async" loading="lazy"></div>
+                        </div>
+                        <button type="button" class="carousel-btn carousel-btn--next" aria-label="Next photo"><img src="/static/imgs/next.png" alt="" width="90" height="90"></button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer class="base-footer">
+        <div class="footer-inner">
+            <p class="footer-text">&copy; 2026 Dominick George</p>
+            <ul class="footer-links">
+                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
+                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/carousel.js"></script>
+</body>
 </html>
