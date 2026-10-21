@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Jarvis: Private AI Assistant · Dominick George</title>
+    <meta name="description" content="A private, voice-driven AI assistant for my notes, running a 35-billion-parameter open model entirely on my own PC, with confirm-before-acting Gmail and Calendar actions.">
+    <meta name="author" content="Dominick George">
+    <link rel="canonical" href="https://domgeorge.dev/projects/jarvis.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Dominick George">
+    <meta property="og:title" content="Jarvis: Private AI Assistant · Dominick George">
+    <meta property="og:description" content="A private, voice-driven AI assistant for my notes, running a 35-billion-parameter open model entirely on my own PC, with confirm-before-acting Gmail and Calendar actions.">
+    <meta property="og:url" content="https://domgeorge.dev/projects/jarvis.html">
+    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#c21043">
+    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <link href="/static/styles/carousel.css" rel="stylesheet">
+    <link href="/static/styles/projects.css" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar" aria-label="Main">
+            <a href="/" class="logo">Dominick George</a>
+            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+            <div class="menu" id="primaryMenu">
+                <ul class="navbar-links-list">
+                    <li><a href="/" class="url-link">Home</a></li>
+                    <li><a href="/about.html" class="url-link">About</a></li>
+                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
+                    <li><a href="/cv.html" class="url-link">CV</a></li>
+                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="page-contents">
+        <article class="container case-study">
+            <a class="back-link" href="/projects.html">&larr; All projects</a>
+
+            <header class="case-header fade-in-up">
+                <p class="eyebrow">AI &middot; Security &middot; Personal project</p>
+                <h1 class="page-title">Jarvis: Private AI Assistant</h1>
+                <p class="lead">
+                    A desktop assistant that turns my markdown notes into an interactive 3D galaxy and answers questions
+                    about them out loud, in the voice of a dry British butler. Everything runs on my own PC: a
+                    35-billion-parameter open model on a 12&nbsp;GB consumer GPU, speech-to-text on the CPU, and no cloud
+                    AI. It can also draft email replies and manage my calendar, but only after I confirm each action.
+                </p>
+                <ul class="languages-list">
+                    <li class="languages-list-item">Python</li>
+                    <li class="languages-list-item">JavaScript</li>
+                    <li class="languages-list-item">llama.cpp</li>
+                    <li class="languages-list-item">Whisper</li>
+                    <li class="languages-list-item">Three.js</li>
+                    <li class="languages-list-item">Google APIs (OAuth 2.0)</li>
+                </ul>
+                <div class="btn-row">
+                    <a class="btn btn--ghost" href="/contact.html">Ask me for a code walkthrough</a>
+                </div>
+                <p class="walkthrough-note">The code is in a private repository; I'm happy to walk through it.</p>
+            </header>
+
+            <div class="case-media">
+                <div class="gallery-wrap">
+                    <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Previous screenshot"><img src="/static/imgs/back.png" alt="" width="90" height="90"></button>
+                    <div class="gallery" tabindex="0" aria-label="Screenshots (scrollable)">
+                        <div><img src="/static/imgs/jarvis-1.webp" alt="Jarvis's main screen: notes shown as glowing coloured stars in space, a cyan arc-reactor HUD labelled Jarvis with the model name QWEN3.6-35B, a What needs me? panel, a group legend and a chat bar." width="1400" height="900" decoding="async"></div>
+                        <div><img src="/static/imgs/jarvis-2.webp" alt="An answer to What did I decide about the Atlas migration?, with the camera framing the six source notes, their links lit up, and a chip for each source note under the answer." width="1400" height="900" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/jarvis-3.webp" alt="The Atlas Migration note opened from search: the camera has flown to its star and a side panel shows the note's folder, text and connected notes." width="1400" height="900" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/jarvis-4.webp" alt="Voice input in progress: the microphone button glows red, the status line reads Listening and the HUD shows Listening." width="1400" height="900" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/jarvis-5.webp" alt="Example data: the What needs me? panel lists urgent emails, emails needing a reply and a meeting needing an RSVP, above a draft-reply card with the recipient, subject and body and Dismiss and Save Draft buttons." width="1400" height="900" decoding="async" loading="lazy"></div>
+                    </div>
+                    <button type="button" class="carousel-btn carousel-btn--next" aria-label="Next screenshot"><img src="/static/imgs/next.png" alt="" width="90" height="90"></button>
+                </div>
+                <p class="carousel-hint">5 screenshots: use the arrows or scroll sideways. The notes and inbox shown are sample data.</p>
+            </div>
+
+            <section class="case-section" aria-labelledby="overview-heading">
+                <h2 id="overview-heading">Overview</h2>
+                <p>
+                    I wanted an assistant I could talk to about my own notes without sending them, or my email, to anyone
+                    else's servers. Jarvis turns a folder of markdown notes into a 3D graph: each note is a star coloured by
+                    folder, linked to the notes it mentions. When I ask a question, by typing or speaking, it picks the
+                    most relevant notes, asks a local language model to answer from them, reads the answer aloud and flies
+                    the camera to the notes it used, so I can check where the answer came from.
+                </p>
+                <p>
+                    It runs as a native desktop window. A Python standard-library HTTP server serves the interface on
+                    127.0.0.1 and starts the model server itself, which shuts down whenever Jarvis closes.
+                </p>
+            </section>
+
+            <section class="case-section" aria-labelledby="role-heading">
+                <h2 id="role-heading">My role</h2>
+                <p>
+                    A solo personal project. I set the requirements, made the architecture and security decisions (which
+                    model and runtime to use, how actions are confirmed, what is allowed to leave the machine), and tested
+                    everything on my own hardware. I used Claude Code as an AI pair programmer for much of the
+                    implementation, reviewing a written plan before each feature and checking the results with automated
+                    browser tests.
+                </p>
+            </section>
+
+            <section class="case-section" aria-labelledby="features-heading">
+                <h2 id="features-heading">Key features</h2>
+                <ul class="feature-list">
+                    <li><strong>3D knowledge galaxy:</strong> notes as glowing stars, links from title mentions and <code>[[wikilinks]]</code>, search, folder filters, and click-to-fly with a side panel for each note.</li>
+                    <li><strong>Answers with sources:</strong> the most relevant notes are chosen by keyword overlap, with title matches weighted; the camera highlights the notes behind each answer, and small talk is answered without dragging the camera anywhere.</li>
+                    <li><strong>Voice both ways:</strong> local Whisper speech-to-text with automatic end-of-speech detection, and spoken replies through an on-device Windows voice; an arc-reactor HUD pulses with each word.</li>
+                    <li><strong>Gmail and Calendar:</strong> a spoken morning briefing, a persistent &ldquo;What needs me?&rdquo; panel (urgent emails, replies owed, meetings needing an RSVP), and plain-English requests to draft replies or create and delete events.</li>
+                    <li><strong>Conversation memory:</strong> follow-up questions work, and the model is given the current date and time so &ldquo;tomorrow at 3pm&rdquo; lands on the right day.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="model-heading">
+                <h2 id="model-heading">Running a 35B model on a 12&nbsp;GB GPU</h2>
+                <p>
+                    I chose Qwen3.6-35B-A3B, an Apache-licensed mixture-of-experts model: it holds 35 billion parameters but
+                    uses only about 3 billion per word, so most of its weight can live in system RAM. It runs through
+                    llama.cpp, which keeps the expert weights of a chosen number of layers on the CPU. That gave me an exact
+                    dial for GPU memory, so the PC stays usable while Jarvis is open.
+                </p>
+                <ul class="feature-list">
+                    <li><strong>Calibrated, not guessed:</strong> I measured the fixed GPU cost (3.1&nbsp;GB) and the cost per expert layer (392&nbsp;MB), then put 7 of the 40 layers on the GPU. Jarvis uses 5.9&nbsp;GB of VRAM in total and generates about 23 tokens a second.</li>
+                    <li><strong>Prompt processing:</strong> larger batches raised prompt speed from about 190 to about 660 tokens a second, so most replies take 2&ndash;8 seconds.</li>
+                    <li><strong>Working around an upstream bug:</strong> the server crashed on certain prompt sizes. I traced it to an open llama.cpp issue (<a class="text-link" href="https://github.com/ggml-org/llama.cpp/issues/27792">#27792</a>), where a CUDA kernel reads past its buffer when expert weights live in RAM. A warm-up request at start-up leaves the GPU memory pool enough slack, which I confirmed across dozens of prompt lengths.</li>
+                    <li><strong>Lifecycle:</strong> the model server runs in a Windows Job Object, so even a force-killed Jarvis takes it down rather than leaving 13&nbsp;GB of RAM in use.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="security-heading">
+                <h2 id="security-heading">Security &amp; privacy</h2>
+                <ul class="feature-list">
+                    <li><strong>Local by default:</strong> fonts and the 3D libraries are bundled, and automated tests confirm the interface makes no requests outside 127.0.0.1. Voice audio is transcribed on the CPU and spoken replies use only on-device voices.</li>
+                    <li><strong>Human confirmation for every action:</strong> the model can only propose an action. The server validates it, stores it under a random one-time ID that expires after 10 minutes, and shows a card built from verified data; nothing happens until I click Confirm, and the browser only ever sends back the opaque ID.</li>
+                    <li><strong>Prompt-injection defence:</strong> an action card appears only if my own message asked for that kind of action, so instructions hidden in an email can't trigger one. Reply recipients come from the real message, and event and email IDs must match items Jarvis actually fetched.</li>
+                    <li><strong>Drafts, never sends:</strong> Gmail access is limited to reading and drafting (<code>gmail.readonly</code>, <code>gmail.compose</code>, <code>calendar.events</code>). Google's drafting scope technically allows sending, so the guarantee lives in the code: only one module talks to Google, and it never calls a send method.</li>
+                    <li><strong>Server hardening:</strong> the server binds to 127.0.0.1 only, rejects cross-site POST requests by checking the Origin header, serves only the interface folder, and refuses to run twice. OAuth credentials and tokens stay outside the served folder and are excluded from git.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="testing-heading">
+                <h2 id="testing-heading">Testing</h2>
+                <div class="table-wrap">
+                    <table class="results-table">
+                        <thead>
+                            <tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Notes</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Action requests and prompt injection</td><td><span class="status status--pass">Pass</span></td><td>15 of 15 prompts handled correctly against the real model, including an email that tried to hijack it.</td></tr>
+                            <tr><td>Voice input, end to end</td><td><span class="status status--pass">Pass</span></td><td>Browser test with a simulated microphone: transcribed word-perfect in 1.8&nbsp;s, answered and spoken, mic released afterwards.</td></tr>
+                            <tr><td>Nothing leaves the machine</td><td><span class="status status--pass">Pass</span></td><td>Zero external requests, and the page renders fully with all outside traffic blocked.</td></tr>
+                            <tr><td>Shutdown and recovery</td><td><span class="status status--pass">Pass</span></td><td>Model server gone 0.8&nbsp;s after a force-kill; clear chat errors for a missing model, missing CUDA files or a busy port.</td></tr>
+                            <tr><td>Answer wording</td><td><span class="status status--warn">Partial</span></td><td>The smaller local model occasionally words its reply in a way that contradicts its own action card. The card always shows the real data, so it stays safe.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="case-section" aria-labelledby="next-heading">
+                <h2 id="next-heading">What I'd improve next</h2>
+                <ul class="feature-list">
+                    <li>Replace keyword matching with embedding-based search, so questions phrased differently from the notes still find them.</li>
+                    <li>Add a more natural local voice (for example Kokoro) in place of the default Windows voice.</li>
+                    <li>Grow the 15-prompt evaluation set for actions into a larger regression suite that runs on every change.</li>
+                    <li>Package it as a one-click installer; today it needs Python and a one-time setup script that downloads about 19&nbsp;GB.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer class="base-footer">
+        <div class="footer-inner">
+            <p class="footer-text">&copy; 2026 Dominick George</p>
+            <ul class="footer-links">
+                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
+                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/carousel.js"></script>
+</body>
+</html>
