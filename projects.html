@@ -1,234 +1,239 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-    <title>Projects · Dominick George</title>
-    <meta name="description" content="Security and full-stack projects by Dominick George, including an NHS Wales recruitment app, a two-factor login system and a full-stack chat app.">
-    <meta name="author" content="Dominick George">
-    <link rel="canonical" href="https://domgeorge.dev/projects.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dominick George">
-    <meta property="og:title" content="Projects · Dominick George">
-    <meta property="og:description" content="Security and full-stack projects by Dominick George, including an NHS Wales recruitment app, a two-factor login system and a full-stack chat app.">
-    <meta property="og:url" content="https://domgeorge.dev/projects.html">
-    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#c21043">
-    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link href="/static/styles/base.css" rel="stylesheet">
-    <link href="/static/styles/projects.css" rel="stylesheet">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="header">
-        <nav class="navbar" aria-label="Main">
-            <a href="/" class="logo">Dominick George</a>
-            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </button>
-            <div class="menu" id="primaryMenu">
-                <ul class="navbar-links-list">
-                    <li><a href="/" class="url-link">Home</a></li>
-                    <li><a href="/about.html" class="url-link">About</a></li>
-                    <li><a href="/projects.html" class="url-link" aria-current="page">Projects</a></li>
-                    <li><a href="/cv.html" class="url-link">CV</a></li>
-                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+<html lang="en">
+    <head>
+        <title>Projects Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="static/styles/base.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="static/imgs/cv_logo.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
+        <link href="static/styles/projects.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <p class="logo-text">Dominick George</p>
+                </div>
+
+                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
+
+                <div class="menu">
+                    <ul class="navbar-links-list">
+                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
+                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
+                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
+                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
+                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="page-contents">
+            <p class="intro-text">Through my coding journey I have developed a large range of projects.<br> This has helped my understanding of the wider concepts needed to be effective as a developer.</p>
+            <h1 class="projects-title">Projects</h1>
+            <p class="list-text">All text within tabs are links which take you to more info of the project.</p>
+            <div class="car-container">
+                <a class="car-link">Autonomous Racing Project</a>
+            </div>
+            <p class="list-text">This is the list of projects I have created: </p>
+
+            <div class="tabs">
+
+                <!-- Games Tab -->
+                <input type="radio" class="tabs__radio" name="projects-tab" id="games-tab" checked>
+                <label for="games-tab" class="tabs__label">Games</label>
+                <div class="tabs__content">
+
+                    <!-- Beginner Section -->
+                    <h3>Beginner Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/monopoly.html">Monopoly Game</a></li>
+                        <li class="projects-list-item"><a href="/projects/merchant-ship-game.html">Merchant Ship Game</a></li>
+                    </ul>
+
+                    <!-- Intermediate Section -->
+                    <h3>Intermediate Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/2d-java-rpg-game.html">2D Java RPG Game</a></li>
+                        <!-- <li class="projects-list-item"><a href="/projects/2d-java-platformer-game">2D Java Platformer Game</a></li> NOT FINISHED -->
+                    </ul>
+
+                    <!-- Advanced Section -->
+                    <h3>Advanced Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/game-engine.html">Game Engine</a></li>
+                    </ul>
+                </div>
+
+                <!-- Web Dev Tab -->
+                <input type="radio" class="tabs__radio" name="projects-tab" id="web-dev-tab">
+                <label for="web-dev-tab" class="tabs__label">Website Development</label>
+                <div class="tabs__content">
+                    <!-- Beginner Section -->
+                    <h3>Beginner Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/time-map.html">Time-Map Website</a></li>
+                        <li class="projects-list-item"><a href="/projects/cv-website.html">My Portfolio Website</a></li>
+                        <li class="projects-list-item"><a href="/projects/weather-app.html">Weather App</a></li>
+                    </ul>
+
+                    <!-- Intermediate Section -->
+                    <h3>Intermediate Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/client-project.html">A client project for a mentorship program website</a></li>
+                        <li class="projects-list-item"><a href="/projects/chat-app.html">Chat App</a></li>
+                        <li class="projects-list-item"><a href="/projects/second-yr-client-project.html">NHS Wales Recruitment Web App</a></li>
+                        <!-- <li class="projects-list-item"><a href="/projects/wye-camping-website">A full stack website for my mum's camping business</a></li>  NOT FINISHED -->
+                    </ul>
+
+                    <!-- Advanced Section -->
+                    <h3>Advanced Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+                </div>
+
+                <!-- Cyber Security Tab -->
+                <input type="radio" class="tabs__radio" name="projects-tab" id="security-tab">
+                <label for="security-tab" class="tabs__label">Cyber Security</label>
+                <div class="tabs__content">
+                    <!-- Beginner Section -->
+                    <h3>Beginner Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/pass_manager.html">Password Manager</a></li>
+                        <li class="projects-list-item"><a href="/projects/web-server.html">Web Server</a></li>
+                    </ul>
+
+                    <!-- Intermediate Section -->
+                    <h3>Intermediate Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/login-gui.html">Secure Login GUI</a></li>
+                    </ul>
+
+                    <!-- Advanced Section -->
+                    <h3>Advanced Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+                </div>
+
+                <!-- Cloud Computing -->
+                <input type="radio" class="tabs__radio" name="projects-tab" id="cloud-tab">
+                <label for="cloud-tab" class="tabs__label">Cloud Computing</label>
+                <div class="tabs__content">
+                    <!-- Beginner Section -->
+                    <h3>Beginner Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+
+                    <!-- Intermediate Section -->
+                    <h3>Intermediate Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+
+                    <!-- Advanced Section -->
+                    <h3>Advanced Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+                </div>
+
+                <!-- DevOps Tab -->
+                <input type="radio" class="tabs__radio" name="projects-tab" id="devops-tab">
+                <label for="devops-tab" class="tabs__label">DevOps</label>
+                <div class="tabs__content">
+                    <!-- Beginner Section -->
+                    <h3>Beginner Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+
+                    <!-- Intermediate Section -->
+                    <h3>Intermediate Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+
+                    <!-- Advanced Section -->
+                    <h3>Advanced Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Development Tab -->
+                <input type="radio" class="tabs__radio" name="projects-tab" id="mobile-tab">
+                <label for="mobile-tab" class="tabs__label">Mobile Development</label>
+                <div class="tabs__content">
+                    <!-- Beginner Section -->
+                    <h3>Beginner Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+
+                    <!-- Intermediate Section -->
+                    <h3>Intermediate Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+
+                    <!-- Advanced Section -->
+                    <h3>Advanced Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+                </div>
+
+                <!-- Miscellaneous Tab -->
+                <input type="radio" class="tabs__radio" name="projects-tab" id="misc-tab">
+                <label for="misc-tab" class="tabs__label">Misc</label>
+                <div class="tabs__content">
+                    <!-- Beginner Section -->
+                    <h3>Beginner Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"><a href="/projects/first-program.html">A python app for my mums business</a></li>
+                        <li class="projects-list-item"><a href="/projects/database.html">Database Assessment</a></li>
+                    </ul>
+
+                    <!-- Intermediate Section -->
+                    <h3>Intermediate Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+
+                    <!-- Advanced Section -->
+                    <h3>Advanced Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list-item"></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="info-text">If prior notice is given, I will be able to go through the git repositories for each project and explain the development process.</p>
+        </main>
+        <footer class="base-footer">
+            <div class="footer-container">
+                <p class="footer-text">Dominick George 2024</p>
+            </div>
+            <div class="contact-info">
+                <ul>
+                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
+                    <li><span class="seperator">/</span></li>
+                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-    <main id="main" class="page-contents">
-        <div class="container">
-            <header class="page-header">
-                <h1 class="page-title">Projects</h1>
-                <p class="lead">
-                    Security and full-stack work from my degree, client projects and my own time. Each write-up covers
-                    what I built, my role, and the security decisions behind it.
-                </p>
-            </header>
-
-            <section class="project-section" aria-labelledby="featured-heading">
-                <h2 class="section-title" id="featured-heading">Featured</h2>
-                <ul class="project-grid">
-                    <li class="project-card">
-                        <a class="project-card__media" href="/projects/second-yr-client-project.html" tabindex="-1" aria-hidden="true">
-                            <img src="/static/imgs/nhs-recruitment-4-thumb.webp" alt="" width="720" height="355">
-                        </a>
-                        <div class="project-card__body">
-                            <p class="eyebrow">Full-stack &middot; Client project &middot; Team</p>
-                            <h3 class="project-card__title"><a href="/projects/second-yr-client-project.html">NHS Wales Recruitment App</a></h3>
-                            <p class="project-card__summary">Applicant-tracking system for NHS Wales recruiters: candidate search and profiles, bulk email, statistics and an admin area, secured with Spring Security.</p>
-                            <ul class="languages-list">
-                                <li class="languages-list-item">Java</li>
-                                <li class="languages-list-item">Spring Boot</li>
-                                <li class="languages-list-item">Spring Security</li>
-                                <li class="languages-list-item">Thymeleaf</li>
-                                <li class="languages-list-item">MariaDB</li>
-                            </ul>
-                            <div class="project-card__links">
-                                <a href="/projects/second-yr-client-project.html">Case study &rarr;</a>
-                                <a href="https://github.com/dominick-george-dev/NHS-Wales-Recruitment-Web-App">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="project-card">
-                        <a class="project-card__media" href="/projects/taxally.html" tabindex="-1" aria-hidden="true">
-                            <img src="/static/imgs/taxally-1-thumb.webp" alt="" width="720" height="442" decoding="async" loading="lazy">
-                        </a>
-                        <div class="project-card__body">
-                            <p class="eyebrow">Full-stack &middot; Security &middot; Team project</p>
-                            <h3 class="project-card__title"><a href="/projects/taxally.html">TaxAlly</a></h3>
-                            <p class="project-card__summary">AI-assisted UK Self Assessment platform built by a team of five. I owned cookie-based JWT authentication, registration and privacy consent, and the tax Insights dashboard.</p>
-                            <ul class="languages-list">
-                                <li class="languages-list-item">Next.js</li>
-                                <li class="languages-list-item">TypeScript</li>
-                                <li class="languages-list-item">Django REST</li>
-                                <li class="languages-list-item">PostgreSQL</li>
-                                <li class="languages-list-item">JWT</li>
-                            </ul>
-                            <div class="project-card__links">
-                                <a href="/projects/taxally.html">Case study &rarr;</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="project-card">
-                        <a class="project-card__media" href="/projects/accessible-gaming-platform.html" tabindex="-1" aria-hidden="true">
-                            <img src="/static/imgs/accessible-gaming-platform-1-thumb.webp" alt="" width="720" height="442" decoding="async" loading="lazy">
-                        </a>
-                        <div class="project-card__body">
-                            <p class="eyebrow">Full-stack &middot; Security &middot; Team project</p>
-                            <h3 class="project-card__title"><a href="/projects/accessible-gaming-platform.html">Accessible Gaming Platform</a></h3>
-                            <p class="project-card__summary">Full-stack platform for finding accessible mobile games, built in a team of five with React, NestJS and PostgreSQL, JWT role-based access control and a Terraform/Jenkins pipeline.</p>
-                            <ul class="languages-list">
-                                <li class="languages-list-item">React</li>
-                                <li class="languages-list-item">NestJS</li>
-                                <li class="languages-list-item">PostgreSQL</li>
-                                <li class="languages-list-item">JWT</li>
-                                <li class="languages-list-item">Jenkins</li>
-                            </ul>
-                            <div class="project-card__links">
-                                <a href="/projects/accessible-gaming-platform.html">Case study &rarr;</a>
-                                <a href="https://github.com/dominick-george-dev/Accessible-Gaming-Website">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="project-card">
-                        <a class="project-card__media" href="/projects/login-gui.html" tabindex="-1" aria-hidden="true">
-                            <img src="/static/imgs/secure-login-1-thumb.webp" alt="" width="720" height="348">
-                        </a>
-                        <div class="project-card__body">
-                            <p class="eyebrow">Security &middot; Personal project</p>
-                            <h3 class="project-card__title"><a href="/projects/login-gui.html">Secure Login System</a></h3>
-                            <p class="project-card__summary">Desktop login system with bcrypt-hashed passwords, TOTP two-factor authentication via an authenticator app, and parameterised SQL to block injection.</p>
-                            <ul class="languages-list">
-                                <li class="languages-list-item">Python</li>
-                                <li class="languages-list-item">bcrypt</li>
-                                <li class="languages-list-item">TOTP 2FA</li>
-                                <li class="languages-list-item">SQLite</li>
-                            </ul>
-                            <div class="project-card__links">
-                                <a href="/projects/login-gui.html">Case study &rarr;</a>
-                                <a href="https://github.com/dominick-george-dev/Login-System">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="project-card">
-                        <a class="project-card__media" href="/projects/cardiff-autonomous-racing.html" tabindex="-1" aria-hidden="true">
-                            <img src="/static/imgs/car-path-planner-1-thumb.webp" alt="" width="720" height="406">
-                        </a>
-                        <div class="project-card__body">
-                            <p class="eyebrow">Autonomous systems &middot; ROS 2 &middot; Leadership</p>
-                            <h3 class="project-card__title"><a href="/projects/cardiff-autonomous-racing.html">Cardiff Autonomous Racing</a></h3>
-                            <p class="project-card__summary">Led the path-planning team (8 engineers) for Cardiff's autonomous race car and built the ROS 2 node that turns cone detections into a minimum-curvature racing line.</p>
-                            <ul class="languages-list">
-                                <li class="languages-list-item">Python</li>
-                                <li class="languages-list-item">ROS 2</li>
-                                <li class="languages-list-item">Optimisation</li>
-                                <li class="languages-list-item">SciPy</li>
-                                <li class="languages-list-item">Leadership</li>
-                            </ul>
-                            <div class="project-card__links">
-                                <a href="/projects/cardiff-autonomous-racing.html">Case study &rarr;</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="project-card">
-                        <a class="project-card__media" href="/projects/chat-app.html" tabindex="-1" aria-hidden="true">
-                            <img src="/static/imgs/chat-app-1-thumb.webp" alt="" width="720" height="325">
-                        </a>
-                        <div class="project-card__body">
-                            <p class="eyebrow">Full-stack &middot; Personal project</p>
-                            <h3 class="project-card__title"><a href="/projects/chat-app.html">Full-stack Chat App</a></h3>
-                            <p class="project-card__summary">Messaging between registered users with a React front end, a Node.js/Express REST API, JWT authentication, bcrypt password hashing and MongoDB Atlas.</p>
-                            <ul class="languages-list">
-                                <li class="languages-list-item">React</li>
-                                <li class="languages-list-item">Node.js</li>
-                                <li class="languages-list-item">Express</li>
-                                <li class="languages-list-item">MongoDB</li>
-                                <li class="languages-list-item">JWT</li>
-                            </ul>
-                            <div class="project-card__links">
-                                <a href="/projects/chat-app.html">Case study &rarr;</a>
-                                <a href="https://github.com/dominick-george-dev/NodeJS-Realtime-Chat">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-
-                </ul>
-            </section>
-
-            <section class="project-section" aria-labelledby="more-heading">
-                <h2 class="section-title" id="more-heading">More projects</h2>
-                <ul class="project-list">
-                    <li class="project-list-item"><a href="/projects/client-project.html"><strong>Wavelength Mentorship Platform</strong><span>Flask client project with a credit system, email verification and role-based permissions</span></a></li>
-                    <li class="project-list-item"><a href="/projects/pass_manager.html"><strong>Password Manager</strong><span>Command-line vault that encrypts each entry with Fernet</span></a></li>
-                    <li class="project-list-item"><a href="/projects/game-engine.html"><strong>3D Game Engine</strong><span>C++ renderer with hand-written matrix maths and camera projection</span></a></li>
-                    <li class="project-list-item"><a href="/projects/monopoly.html"><strong>Monopoly (Java)</strong><span>Built and tested in GitLab CI with coverage and Checkstyle quality gates</span></a></li>
-                    <li class="project-list-item"><a href="/projects/web-server.html"><strong>Python Web Server</strong><span>HTTP GET/POST handling with the standard library</span></a></li>
-                    <li class="project-list-item"><a href="/projects/weather-app.html"><strong>Weather App</strong><span>JavaScript front end for the OpenWeather API</span></a></li>
-                    <li class="project-list-item"><a href="/projects/2d-java-rpg-game.html"><strong>2D Java RPG</strong><span>Game loop, tile maps and sprites in plain Java</span></a></li>
-                    <li class="project-list-item"><a href="/projects/time-map.html"><strong>World Time Map</strong><span>Interactive map showing the time in any country</span></a></li>
-                    <li class="project-list-item"><a href="/projects/cv-website.html"><strong>This website</strong><span>Accessible static site with a strict Content Security Policy</span></a></li>
-                </ul>
-
-                <details class="earlier-work">
-                    <summary>Earlier work (first year and A-level)</summary>
-                    <ul class="project-list">
-                        <li class="project-list-item"><a href="/projects/database.html"><strong>Database Design</strong><span>ER model and MariaDB schema for a booking system</span></a></li>
-                        <li class="project-list-item"><a href="/projects/merchant-ship-game.html"><strong>Merchant Ship Game</strong><span>Python terminal game</span></a></li>
-                        <li class="project-list-item"><a href="/projects/first-program.html"><strong>A-level Python App</strong><span>Desktop app for my mum's camping business</span></a></li>
-                    </ul>
-                </details>
-            </section>
-
-            <p class="walkthrough-note">Happy to walk through any of these codebases in an interview. <a class="text-link" href="/contact.html">Get in touch</a>.</p>
-        </div>
-    </main>
-    <footer class="base-footer">
-        <div class="footer-inner">
-            <p class="footer-text">&copy; 2026 Dominick George</p>
-            <ul class="footer-links">
-                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
-                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="/static/js/main.js"></script>
-</body>
+        </footer>
+        <script src="static/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
+    </body>
 </html>

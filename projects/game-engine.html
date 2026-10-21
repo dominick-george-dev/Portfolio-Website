@@ -1,91 +1,102 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-    <title>3D Game Engine · Dominick George</title>
-    <meta name="description" content="A 3D renderer written from scratch in C++ with hand-written matrix maths and camera projection.">
-    <meta name="author" content="Dominick George">
-    <link rel="canonical" href="https://domgeorge.dev/projects/game-engine.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Dominick George">
-    <meta property="og:title" content="3D Game Engine · Dominick George">
-    <meta property="og:description" content="A 3D renderer written from scratch in C++ with hand-written matrix maths and camera projection.">
-    <meta property="og:url" content="https://domgeorge.dev/projects/game-engine.html">
-    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#c21043">
-    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link href="/static/styles/base.css" rel="stylesheet">
-    <link href="/static/styles/projects.css" rel="stylesheet">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="header">
-        <nav class="navbar" aria-label="Main">
-            <a href="/" class="logo">Dominick George</a>
-            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </button>
-            <div class="menu" id="primaryMenu">
-                <ul class="navbar-links-list">
-                    <li><a href="/" class="url-link">Home</a></li>
-                    <li><a href="/about.html" class="url-link">About</a></li>
-                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
-                    <li><a href="/cv.html" class="url-link">CV</a></li>
-                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+<html lang="en">
+    <head>
+        <title>Game Engine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="../static/styles/base.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../static/imgs/cv_logo.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
+        <link href="../static/styles/carousel.css" rel="stylesheet" type="text/css">
+        <link href="../static/styles/projects.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <p class="logo-text">Dominick George</p>
+                </div>
+
+                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
+
+                <div class="menu">
+                    <ul class="navbar-links-list">
+                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
+                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
+                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
+                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
+                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="page-contents">
+            <div class="main-container">
+
+                <h1 class="projects-title">Game Engine</h1>
+            
+                <div class="gallery-wrap">
+                    <!-- <img src="../static/imgs/back.png" id="backBtn">
+                    <div class="gallery">
+                        <div>
+                            <img src="../static/imgs/login_1.png" class="project-img" width="1000px" height="500px" alt="Initial picture of my login application with user1 details entered and a pop-up prompting the user for their 2FA code.">
+                        </div>
+                        <div>
+                            <img src="../static/imgs/login_2.png" class="project-img" width="300px" height="500px" alt="Pop-up telling the user that they successfully setup 2FA on their account.">
+                        </div>
+                        <div>
+                            <img src="../static/imgs/login_4.png" class="project-img" width="200px" height="500px" alt="The QR code that the user will recieve once they enable 2FA on their account.">
+                        </div>
+                        <div>
+                            <img src="../static/imgs/login_3.png" class="project-img" width="850px" height="500px" alt="Overview of the account dashboard that the user will see when they log into their account.">
+                        </div>
+                    </div>
+                    <img src="../static/imgs/next.png" id="nextBtn"> -->
+                
+                  <!-- Temporary image place until development continues -->
+                  <img src="../static/imgs/game_engine_1.PNG" class="project-img" width="1000px" height="500px" alt="First version of my game engine which renders a rotating cube made of triangles.">
+                
+                </div>
+            
+                <div class="project-overview-container">
+            
+                    <p class="project-text">
+                        This was the first program I developed using C++. This was a challenge as I was unfamiliar with the additional complexity that C++ brings compared to other languages. Additionally, I did not use any math libraries to help me with the 3D rendering, so I had to implement all the math functions myself. This included multiplying matrixes as well as understanding how to interpret 3D coordinates onto a 2D screen. This was a great learning experience as I had to understand the math behind 3D rendering and implement it in code. I found this learning curve very interesting as I always had a fascination with computer graphics. I was most interested in how I implemented the camera, interpreting triangles to be translated correctly for the camera was fascinating. It also taught me a lot about C++ which was needed for the Cardiff Autonomous Racing Team project. 
+                    </p>
+            
+                    <div class="git-link-container">
+                        <a class="git-link" href="https://github.com/Domisalej6921/3D_Game_Engine">Github Project Link</a><br>
+                    </div>
+            
+                    <p class="languages-list-label">Languages used during the development of this project: </p>
+            
+                    <ul class="languages-list">
+                        <li class="languages-list-item">C++</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="base-footer">
+            <div class="footer-container">
+                <p class="footer-text">Dominick George 2024</p>
+            </div>
+            <div class="contact-info">
+                <ul>
+                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
+                    <li><span class="seperator">/</span></li>
+                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-    <main id="main" class="page-contents">
-        <article class="container case-study">
-            <a class="back-link" href="/projects.html">&larr; All projects</a>
-
-            <header class="case-header fade-in-up">
-                <p class="eyebrow">C++ &middot; Graphics &middot; Personal project</p>
-                <h1 class="page-title">3D Game Engine</h1>
-                <p class="lead">My first C++ program: a 3D renderer built without any maths libraries, so every matrix operation and projection is hand-written. Development is ongoing.</p>
-                <ul class="languages-list">
-                    <li class="languages-list-item">C++</li>
-                    <li class="languages-list-item">Linear algebra</li>
-                    <li class="languages-list-item">3D graphics</li>
-                </ul>
-                <div class="btn-row">
-                    <a class="btn btn--ghost" href="https://github.com/dominick-george-dev/3D_Game_Engine"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg> View code on GitHub</a>
-                </div>
-            </header>
-
-            <figure class="case-media">
-                <img class="project-img" src="/static/imgs/game-engine-1.webp" alt="A wireframe cube made of triangles, rotating in 3D, rendered by the engine." width="784" height="523" decoding="async">
-                <figcaption>Early milestone: a rotating wireframe cube built from triangles.</figcaption>
-            </figure>
-
-            <section class="case-section" aria-labelledby="section-1">
-                <h2 id="section-1">What I built</h2>
-                <p>I implemented the maths behind 3D rendering myself: matrix multiplication, projecting 3D coordinates onto a 2D screen, and a camera that transforms each triangle into view. The camera was the part I found most interesting.</p>
-                <p>It was also my introduction to C++ and the extra complexity it brings compared with the languages I'd used before, and it fed a long-standing interest in computer graphics.</p>
-            </section>
-        </article>
-    </main>
-    <footer class="base-footer">
-        <div class="footer-inner">
-            <p class="footer-text">&copy; 2026 Dominick George</p>
-            <ul class="footer-links">
-                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
-                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="/static/js/main.js"></script>
-</body>
+        </footer>
+        <script src="../static/js/project_img_slider.js"></script>
+        <script src="../static/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
+    </body>
 </html>

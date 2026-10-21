@@ -1,79 +1,84 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-    <title>CV · Dominick George</title>
-    <meta name="description" content="View or download Dominick George&#x27;s CV.">
-    <meta name="author" content="Dominick George">
-    <link rel="canonical" href="https://domgeorge.dev/cv.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dominick George">
-    <meta property="og:title" content="CV · Dominick George">
-    <meta property="og:description" content="View or download Dominick George&#x27;s CV.">
-    <meta property="og:url" content="https://domgeorge.dev/cv.html">
-    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#c21043">
-    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link href="/static/styles/base.css" rel="stylesheet">
-    <link href="/static/styles/cv.css" rel="stylesheet">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="header">
-        <nav class="navbar" aria-label="Main">
-            <a href="/" class="logo">Dominick George</a>
-            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </button>
-            <div class="menu" id="primaryMenu">
-                <ul class="navbar-links-list">
-                    <li><a href="/" class="url-link">Home</a></li>
-                    <li><a href="/about.html" class="url-link">About</a></li>
-                    <li><a href="/projects.html" class="url-link">Projects</a></li>
-                    <li><a href="/cv.html" class="url-link" aria-current="page">CV</a></li>
-                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+<html lang="en">
+    <head>
+        <title>CV Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="static/styles/base.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="static/imgs/cv_logo.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
+        <link href="static/styles/cv.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <p class="logo-text">Dominick George</p>
+                </div>
+
+                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
+
+                <div class="menu">
+                    <ul class="navbar-links-list">
+                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
+                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
+                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
+                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
+                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="page-contents">
+            <div class="main-container">
+
+                <h1 class="page-title">CV</h1>
+            
+                <div class="cv-container">
+                    <div class="cv-viewer-wrapper">
+                        <iframe 
+                            src="static/documents/cv.pdf#toolbar=1&navpanes=1&scrollbar=1" 
+                            class="cv-pdf-viewer"
+                            type="application/pdf"
+                            title="Dominick George CV"
+                            allow="fullscreen">
+                            <div class="cv-fallback">
+                                <p>Your browser does not support embedded PDFs.</p>
+                                <a href="static/documents/cv.pdf" class="cv-download-link" download>
+                                    <i class="fas fa-download"></i> Download CV (PDF)
+                                </a>
+                            </div>
+                        </iframe>
+                    </div>
+                    <div class="cv-download-container">
+                        <a href="static/documents/cv.pdf" class="cv-download-button" download>
+                            <i class="fas fa-download"></i> Download CV (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="base-footer">
+            <div class="footer-container">
+                <p class="footer-text">Dominick George 2024</p>
+            </div>
+            <div class="contact-info">
+                <ul>
+                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
+                    <li><span class="seperator">/</span></li>
+                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-    <main id="main" class="page-contents">
-        <div class="container">
-            <header class="page-header page-header--center">
-                <h1 class="page-title">CV</h1>
-            </header>
-
-            <div class="btn-row cv-actions">
-                <a class="btn btn--primary" href="/static/documents/cv.pdf" download="Dominick-George-CV.pdf"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg> Download CV (PDF)</a>
-                <a class="btn btn--ghost" href="/static/documents/cv.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg> Open in a new tab</a>
-            </div>
-
-            <p class="cv-mobile-note">Use the buttons above to open or download my CV as a PDF.</p>
-
-            <div class="cv-viewer-wrapper">
-                <iframe src="/static/documents/cv.pdf#toolbar=1&amp;navpanes=0" class="cv-pdf-viewer" title="Dominick George CV (PDF)"></iframe>
-            </div>
-        </div>
-    </main>
-    <footer class="base-footer">
-        <div class="footer-inner">
-            <p class="footer-text">&copy; 2026 Dominick George</p>
-            <ul class="footer-links">
-                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
-                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="/static/js/main.js"></script>
-</body>
+        </footer>
+        <script src="static/js/main.js"></script>
+        <script src="static/js/cv-viewer.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
+    </body>
 </html>

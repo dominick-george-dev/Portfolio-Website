@@ -1,94 +1,85 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-    <title>Monopoly (Java) · Dominick George</title>
-    <meta name="description" content="Terminal Monopoly game in Java, built and tested in GitLab CI with test-coverage and Checkstyle quality gates.">
-    <meta name="author" content="Dominick George">
-    <link rel="canonical" href="https://domgeorge.dev/projects/monopoly.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Dominick George">
-    <meta property="og:title" content="Monopoly (Java) · Dominick George">
-    <meta property="og:description" content="Terminal Monopoly game in Java, built and tested in GitLab CI with test-coverage and Checkstyle quality gates.">
-    <meta property="og:url" content="https://domgeorge.dev/projects/monopoly.html">
-    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#c21043">
-    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link href="/static/styles/base.css" rel="stylesheet">
-    <link href="/static/styles/projects.css" rel="stylesheet">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="header">
-        <nav class="navbar" aria-label="Main">
-            <a href="/" class="logo">Dominick George</a>
-            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </button>
-            <div class="menu" id="primaryMenu">
-                <ul class="navbar-links-list">
-                    <li><a href="/" class="url-link">Home</a></li>
-                    <li><a href="/about.html" class="url-link">About</a></li>
-                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
-                    <li><a href="/cv.html" class="url-link">CV</a></li>
-                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+<html lang="en">
+    <head>
+        <title>Monopoly Terminal Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="../static/styles/base.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../static/imgs/cv_logo.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
+        <link href="../static/styles/projects.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <p class="logo-text">Dominick George</p>
+                </div>
+
+                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
+
+                <div class="menu">
+                    <ul class="navbar-links-list">
+                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
+                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
+                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
+                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
+                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="page-contents">
+            <div class="main-container">
+
+                <h1 class="projects-title">Monopoly Game</h1>
+            
+                <div class="project-img-container">
+            
+                    <img src="../static/imgs/monolpoly-game.png" class="project-img" width="1000px" height="800px" alt="A picture of the terminal monolpoly game I developed.">
+            
+                </div>
+                <div class="project-overview-container">
+            
+                    <p class="project-text">
+                        This project was an assessment for my ASE degree and introduced me to the value, of automated build, testing and code quality tools on project development. This was all done using gradle and the checkstyle plugin within IntelliJ. This project was important to develop as in order to complete a stage of development, I needed to pass a gradle buildAndReport file. The requirements of this buildAndReport file was a minimum 50% line coverage of each class file for tests, every test must pass and less then 10 checkstyle errors. This project helped me develop my understanding of software development process which would be vital to master automated building for future projects. This helped me conduct thorough tests on projects and ensure that I can eliminate as many bugs as possible whilst creating a well designed and constructed program. The style of project development is also widely used throughout the industry and will help me integrate well with other developers.<br><br>Developing this projects also helped me wrap my head around the OOP paradigm as I had to develop many of it's core concepts such as encapsulation, polymorphism, inheritence, etc. This was because I have never tried out programming in Java before I was tasked with this project, but I had learnt about the concept of OOP at GCSE and A-level. I never struggled with understanding the concepts of OOP, but applying my understanding of OOP was where I struggled and this project helped me develop my understanding of programming and cement my understanding of this program style.
+            
+                        I have included a github and a gitlab link because I used pipelines to test and build the game and I don't believe Github has the pipeline feature.
+                    </p>
+            
+                    <div class="git-link-container">
+                        <a class="git-link" href="https://github.com/Domisalej6921/Monopoly-Game">Github Project Link</a><br>
+                        <a class="git-link" href="https://gitlab.com/DominickGeorge21/monopoly-game">Gitlab Project Link</a>
+                    </div>
+            
+                    <p class="languages-list-label">Languages used during the development of this project: </p>
+            
+                    <ul class="languages-list">
+                        <li class="languages-list-item">Java</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="base-footer">
+            <div class="footer-container">
+                <p class="footer-text">Dominick George 2024</p>
+            </div>
+            <div class="contact-info">
+                <ul>
+                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
+                    <li><span class="seperator">/</span></li>
+                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-    <main id="main" class="page-contents">
-        <article class="container case-study">
-            <a class="back-link" href="/projects.html">&larr; All projects</a>
-
-            <header class="case-header fade-in-up">
-                <p class="eyebrow">Java &middot; CI/CD &middot; University assessment</p>
-                <h1 class="page-title">Monopoly (Java)</h1>
-                <p class="lead">A terminal Monopoly game for a first-year assessment, where the real lesson was automated quality checks: each stage only counted once it passed a Gradle build with test-coverage and code-style gates.</p>
-                <ul class="languages-list">
-                    <li class="languages-list-item">Java</li>
-                    <li class="languages-list-item">Gradle</li>
-                    <li class="languages-list-item">Checkstyle</li>
-                    <li class="languages-list-item">GitLab CI</li>
-                </ul>
-                <div class="btn-row">
-                    <a class="btn btn--ghost" href="https://github.com/dominick-george-dev/Monopoly-Game"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg> View code on GitHub</a>
-                </div>
-            </header>
-
-            <figure class="case-media">
-                <img class="project-img" src="/static/imgs/monopoly-game.webp" alt="Terminal output from a Monopoly turn: the board of stations and roads, a dice roll of 6 and 5, the player's balance and a tax payment." width="1088" height="1118" decoding="async">
-            </figure>
-
-            <section class="case-section" aria-labelledby="section-1">
-                <h2 id="section-1">Quality gates</h2>
-                <p>To complete each stage the code had to pass a Gradle <code>buildAndReport</code> task requiring <strong>at least 50% line coverage for every class</strong>, <strong>every test passing</strong> and <strong>fewer than 10 Checkstyle errors</strong>. Builds and tests ran in GitLab CI pipelines; that repository is private, so the code is mirrored on GitHub.</p>
-            </section>
-            <section class="case-section" aria-labelledby="section-2">
-                <h2 id="section-2">What I learned</h2>
-                <p>It was my first Java project, so it's where I turned my knowledge of object-oriented programming (encapsulation, inheritance, polymorphism) into practice, and where I learned to lean on automated tests to catch bugs early.</p>
-            </section>
-        </article>
-    </main>
-    <footer class="base-footer">
-        <div class="footer-inner">
-            <p class="footer-text">&copy; 2026 Dominick George</p>
-            <ul class="footer-links">
-                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
-                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="/static/js/main.js"></script>
-</body>
+        </footer>
+        <script src="../static/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
+    </body>
 </html>
