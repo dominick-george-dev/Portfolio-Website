@@ -1,191 +1,112 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-    <title>Cardiff Autonomous Racing · Path Planning Lead · Dominick George</title>
-    <meta name="description" content="How I led path planning for Cardiff University&#x27;s autonomous race car: a ROS 2 node that turns cone detections into a minimum-curvature racing line.">
-    <meta name="author" content="Dominick George">
-    <link rel="canonical" href="https://domgeorge.dev/projects/cardiff-autonomous-racing.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Dominick George">
-    <meta property="og:title" content="Cardiff Autonomous Racing · Path Planning Lead · Dominick George">
-    <meta property="og:description" content="How I led path planning for Cardiff University&#x27;s autonomous race car: a ROS 2 node that turns cone detections into a minimum-curvature racing line.">
-    <meta property="og:url" content="https://domgeorge.dev/projects/cardiff-autonomous-racing.html">
-    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#c21043">
-    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link href="/static/styles/base.css" rel="stylesheet">
-    <link href="/static/styles/carousel.css" rel="stylesheet">
-    <link href="/static/styles/projects.css" rel="stylesheet">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="header">
-        <nav class="navbar" aria-label="Main">
-            <a href="/" class="logo">Dominick George</a>
-            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </button>
-            <div class="menu" id="primaryMenu">
-                <ul class="navbar-links-list">
-                    <li><a href="/" class="url-link">Home</a></li>
-                    <li><a href="/about.html" class="url-link">About</a></li>
-                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
-                    <li><a href="/cv.html" class="url-link">CV</a></li>
-                    <li><a href="/contact.html" class="url-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main id="main" class="page-contents">
-        <article class="container case-study">
-            <a class="back-link" href="/projects.html">&larr; All projects</a>
+<html lang="en">
+    <head>
+        <title>Cardiff Autonomous Racing</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="../static/styles/base.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../static/imgs/cv_logo.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
+        <link href="../static/styles/carousel.css" rel="stylesheet" type="text/css">
+        <link href="../static/styles/projects.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <p class="logo-text">Dominick George</p>
+                </div>
 
-            <header class="case-header fade-in-up">
-                <p class="eyebrow">Autonomous systems &middot; ROS 2 &middot; Team leadership</p>
-                <h1 class="page-title">Cardiff Autonomous Racing</h1>
-                <p class="lead">
-                    As a founding member of Cardiff University's autonomous racing team, I led the path-planning team and
-                    was responsible for the path-planning module: the ROS 2 node that turns cone detections into the racing
-                    line the car follows at Silverstone.
-                </p>
-                <ul class="languages-list">
-                    <li class="languages-list-item">Python</li>
-                    <li class="languages-list-item">ROS 2 Humble</li>
-                    <li class="languages-list-item">Trajectory optimisation</li>
-                    <li class="languages-list-item">SciPy</li>
-                    <li class="languages-list-item">Tkinter &amp; Matplotlib</li>
-                    <li class="languages-list-item">Git</li>
-                </ul>
-            </header>
+                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
 
-            <div class="case-media">
+                <div class="menu">
+                    <ul class="navbar-links-list">
+                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
+                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
+                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
+                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
+                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="page-contents">
+            <div class="main-container">
+
+                <h1 class="projects-title">Cardiff Autonomous Racing (Path Planning Lead)</h1>
+            
                 <div class="gallery-wrap">
-                    <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Previous image"><img src="/static/imgs/back.png" alt="" width="90" height="90"></button>
-                    <div class="gallery" tabindex="0" aria-label="Path-planning screenshots and team photo (scrollable)">
+                    <!-- <img src="../static/imgs/back.png" id="backBtn">
+                    <div class="gallery">
                         <div>
-                            <figure>
-                                <img src="/static/imgs/car-path-planner-1.webp" alt="The Path Planning Tester GUI showing an S-curve chicane: blue cones on the left, yellow cones on the right, and a minimum-curvature racing line between them coloured by target speed from 3 to 15 metres per second." width="1400" height="790" decoding="async">
-                                <figcaption>My Path Planning Tester running a minimum-curvature optimisation through an S-curve chicane. The racing line is coloured by target speed.</figcaption>
-                            </figure>
+                            <img src="../static/imgs/login_1.png" class="project-img" width="1000px" height="500px" alt="Initial picture of my login application with user1 details entered and a pop-up prompting the user for their 2FA code.">
                         </div>
                         <div>
-                            <figure>
-                                <img src="/static/imgs/car-path-planner-2.webp" alt="The same chicane in another run, where the track boundaries are built incorrectly near the end of the course and the racing line loops outside the cones." width="1400" height="790" decoding="async" loading="lazy">
-                                <figcaption>A failing run on the same chicane: the boundaries are built wrongly near the end and the line leaves the track. Finding cases like this is what the tester is for.</figcaption>
-                            </figure>
+                            <img src="../static/imgs/login_2.png" class="project-img" width="300px" height="500px" alt="Pop-up telling the user that they successfully setup 2FA on their account.">
                         </div>
                         <div>
-                            <figure>
-                                <img src="/static/imgs/car-team-session.webp" alt="Five team members working on laptops around a meeting-room table during a path-planning working session." width="1400" height="1050" decoding="async" loading="lazy">
-                                <figcaption>A path-planning team working session.</figcaption>
-                            </figure>
+                            <img src="../static/imgs/login_4.png" class="project-img" width="200px" height="500px" alt="The QR code that the user will recieve once they enable 2FA on their account.">
+                        </div>
+                        <div>
+                            <img src="../static/imgs/login_3.png" class="project-img" width="850px" height="500px" alt="Overview of the account dashboard that the user will see when they log into their account.">
                         </div>
                     </div>
-                    <button type="button" class="carousel-btn carousel-btn--next" aria-label="Next image"><img src="/static/imgs/next.png" alt="" width="90" height="90"></button>
+                    <img src="../static/imgs/next.png" id="nextBtn"> -->
                 </div>
-                <p class="carousel-hint">3 images: use the arrows or scroll sideways.</p>
+            
+                <div class="project-overview-container">
+
+                    <p class="project-text">
+                        As the <b>Lead of the Path Planning Team</b> for the <b>Cardiff University Autonomous Racing Team</b>, I have played a pivotal role in developing an autonomous driving system for a race car competing at Silverstone. My work combines technical expertise, leadership, and project management to drive innovation and ensure team success.
+                    </p>
+
+                    <p class="project-text"><b>My Contributions:</b></p>
+
+                    <ul class="languages-list">
+                      <li class="languages-list-item"><b>Team Leadership & Coordination:</b> Led a team of 8 engineers, organizing regular meetings, managing workloads, and ensuring alignment with project goals while balancing my software engineering degree.</li>
+                      <li class="languages-list-item"><b>Path Planning Development:</b> Oversaw the design and implementation of the path planning module, responsible for enabling the vehicle to navigate the track efficiently. Managed our source code collaboratively using Git to maintain a robust and scalable codebase.</li>
+                      <li class="languages-list-item"><b>Resource Management:</b> Provided team members with essential tools and resources, including simulators and technical documentation, to facilitate effective development and testing.</li>
+                      <li class="languages-list-item"><b>Project Documentation & Compliance:</b> Contributed to key technical documents and competition forms required for team participation at Silverstone, ensuring compliance with industry and competition standards.</li>
+                      <li class="languages-list-item"><b>Founding Member:</b> Played a critical role in the formation of the Cardiff Autonomous Racing Team, helping to establish foundational processes, team structure, and long-term strategic goals.</li>
+                  </ul>
+
+                  <p class="project-text">
+                    Through this role, I have developed strong leadership skills, technical proficiency in autonomous systems, and the ability to deliver complex projects under time-sensitive conditions. My work on the Cardiff Autonomous Racing Team reflects my commitment to advancing autonomous vehicle technology and collaborating with multidisciplinary teams to achieve ambitious goals.
+                  </p>
+            
+                    <div class="git-link-container">
+                        <a class="git-link" href="https://git.cardiff.ac.uk/c23015833/cardiff-autonomous-racing">Gitlab Project Link</a><br>
+                    </div>
+            
+                    <p class="languages-list-label">Languages used during the development of this project: </p>
+            
+                    <ul class="languages-list">
+                        <li class="languages-list-item">Python</li>
+                    </ul>
+                </div>
             </div>
-
-            <section class="case-section" aria-labelledby="role-heading">
-                <h2 id="role-heading">My role</h2>
-                <p>
-                    I led a team of <strong>8 engineers</strong> alongside my degree: running regular meetings, managing
-                    workloads, and keeping our work aligned with the other sub-teams and the competition
-                    timeline. I also set up simulators and documentation so new members could develop without the car,
-                    contributed to the technical documents required to compete at Silverstone, and helped establish the
-                    team's structure and processes as a founding member.
-                </p>
-                <p>All of my development on the module was in <strong>Python</strong>.</p>
-            </section>
-
-            <section class="case-section" aria-labelledby="fit-heading">
-                <h2 id="fit-heading">Where it fits</h2>
-                <p>
-                    The module is a ROS 2 Humble node, <code>path_planner</code>. It subscribes to SLAM odometry and YOLO
-                    cone detections from the perception stack, pairs the two streams by approximate timestamp (0.5 s
-                    tolerance), and publishes a <code>nav_msgs/Path</code> for the control team at 5 Hz.
-                </p>
-            </section>
-
-            <section class="case-section" aria-labelledby="how-heading">
-                <h2 id="how-heading">How it works</h2>
-                <ol class="step-list">
-                    <li><strong>Sort the cones.</strong> Blue cones become the left boundary and yellow the right. Orange cones are kept for later use, and unknown or invalid labels are dropped.</li>
-                    <li><strong>Quick centreline (fallback).</strong> Each blue cone is paired with the yellow cone closest to it along the x-axis and the path runs through the midpoints. If only one side is visible, the path is offset 1.5 m from it.</li>
-                    <li><strong>Build a reference track.</strong> Once at least 5 cones are visible on each side, each side is ordered by stepping to the nearest unvisited cone from the car, which copes with hairpins where sorting by position doesn't. Cones are paired across the track by their place in each chain, pairs more than 12 m from their midpoint are rejected as mis-pairings, and the result is converted to TUM's <code>[x, y, w_right, w_left]</code> track format.</li>
-                    <li><strong>Optimise the racing line.</strong> Using TUM's <code>trajectory_planning_helpers</code>, the track is smoothed and resampled, then solved for <strong>minimum curvature</strong> (a quadratic program with a 0.4 m<sup>&minus;1</sup> curvature limit), with shortest path as an alternative. The line is shifted along the track normals and splined to give heading, curvature and velocity for every point.</li>
-                    <li><strong>SciPy fallback.</strong> Without the TUM library, a lightly smoothed B-spline is fitted through the centreline, closed loops are detected, and any point outside the track is pushed back inside with half the car's width as clearance. The nearest-segment search stays local so figure-8 layouts don't confuse it, and target speed falls linearly with curvature from 15 m/s to 3 m/s.</li>
-                    <li><strong>Publish.</strong> The optimised line is published when available, otherwise the simple centreline.</li>
-                </ol>
-            </section>
-
-            <section class="case-section" aria-labelledby="tools-heading">
-                <h2 id="tools-heading">Tooling</h2>
-                <ul class="feature-list">
-                    <li><strong>Path Planning Tester</strong>, a Tkinter/Matplotlib GUI for placing cones or loading scenarios (straight, curves, chicane, hairpin, oval, figure-8, slalom), running either optimiser, inspecting statistics and optionally publishing to ROS.</li>
-                    <li>A smoke test for the TUM integration.</li>
-                    <li>An earlier <strong>RRT*</strong> planner, since retired in favour of the optimisation approach. My public <a class="text-link" href="https://github.com/dominick-george-dev/RRT-Algorithm-Sim">RRT simulator</a> comes from that line of work.</li>
+        </main>
+        <footer class="base-footer">
+            <div class="footer-container">
+                <p class="footer-text">Dominick George 2024</p>
+            </div>
+            <div class="contact-info">
+                <ul>
+                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
+                    <li><span class="seperator">/</span></li>
+                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
                 </ul>
-            </section>
-
-            <section class="case-section" aria-labelledby="results-heading">
-                <h2 id="results-heading">Testing &amp; results</h2>
-                <p>I ran the SciPy fallback against the four scripted test scenarios:</p>
-                <div class="table-wrap">
-                    <table class="results-table">
-                        <thead>
-                            <tr><th scope="col">Scenario</th><th scope="col">Result</th><th scope="col">Notes</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Straight track</td><td><span class="status status--pass">Pass</span></td><td>42.0 m path matching the 42.0 m centreline, zero curvature, solved in 8 ms.</td></tr>
-                            <tr><td>Chicane</td><td><span class="status status--warn">Partial</span></td><td>Ran, but the line oscillates: an 87.7 m path against a 49.2 m centreline, taking 4.5 s.</td></tr>
-                            <tr><td>Hairpin</td><td><span class="status status--fail">Fail</span></td><td>Spline fit rejected the input (<code>splprep</code>: invalid inputs).</td></tr>
-                            <tr><td>Complex circuit</td><td><span class="status status--fail">Fail</span></td><td>Same spline error.</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p>
-                    I traced both failures to <strong>duplicate cones</strong> in the scenario files. They create zero-length
-                    steps in the reference track, which the spline fit rejects, and nothing upstream removes them. None of the
-                    scenarios form a closed loop either, so the closed-loop handling still needs a dedicated test.
-                </p>
-            </section>
-
-            <section class="case-section" aria-labelledby="next-heading">
-                <h2 id="next-heading">What I'd improve next</h2>
-                <ul class="feature-list">
-                    <li>De-duplicate cones before chaining, which fixes the hairpin and circuit failures.</li>
-                    <li>Have the ROS node fall back to the SciPy optimiser when TUM isn't installed, instead of dropping straight to the midpoint centreline.</li>
-                    <li>Pass the car's position into the optimiser so cone chaining starts from the nearest cone, as it already does in the GUI.</li>
-                    <li>Base the speed profile on vehicle dynamics rather than a placeholder or linear rule, and set a heading on each published pose.</li>
-                    <li>Cache or rate-limit optimisation instead of re-solving on every cone message, and bring the module README up to date.</li>
-                </ul>
-                <p class="callout">The team's code lives in a private university repository. I'm happy to walk through the module in detail in an interview.</p>
-            </section>
-        </article>
-    </main>
-    <footer class="base-footer">
-        <div class="footer-inner">
-            <p class="footer-text">&copy; 2026 Dominick George</p>
-            <ul class="footer-links">
-                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
-                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="/static/js/main.js"></script>
-    <script src="/static/js/carousel.js"></script>
-</body>
+            </div>
+        </footer>
+        <script src="../static/js/project_img_slider.js"></script>
+        <script src="../static/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
+    </body>
 </html>

@@ -1,0 +1,60 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: black;
+}
+
+.center {
+  margin-top: 3%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  width: 350px;
+  height: 350px;
+  background: black;
+}
+
+.items {
+  background: transparent;
+  background-color: transparent;
+  margin-top: 3%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  pointer-events: none;
+}
+
+.item {
+  display: block;
+  text-decoration: none;
+  transition: 0.5s;
+  color: white;
+  font-family: poppins;
+  font-size: 24px;
+  font-weight: 500;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+  top: calc(50% - 20px);
+  backface-visibility: hidden;
+  pointer-events: auto;
+}
+
+.item:hover {
+  text-decoration: none;
+  color: rgb(209, 209, 209);
+  transition: 0.5s;
+}
+
+.item.active {
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
+} 

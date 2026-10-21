@@ -1,127 +1,140 @@
-/* Image carousel used on the About page and project pages (see static/js/carousel.js) */
-
-.gallery-wrap {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 16px;
-}
-
 .gallery {
+    width: 390px;
     display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    margin-bottom: 50px;
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: rgba(194, 16, 67, 0.6) transparent;
-    padding-bottom: 12px;
-}
-
-.gallery:focus-visible {
-    outline-offset: 6px;
+    scrollbar-color: rgba(194, 16, 67, 0.5) transparent;
 }
 
 .gallery::-webkit-scrollbar {
+    width: 8px;
     height: 8px;
 }
 
-.gallery::-webkit-scrollbar-thumb {
-    background: rgba(194, 16, 67, 0.6);
+.gallery::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
-.gallery > * {
-    flex: 0 0 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    scroll-snap-align: center;
+.gallery::-webkit-scrollbar-thumb {
+    background: rgba(194, 16, 67, 0.5);
+    border-radius: 10px;
+    transition: background 0.3s ease;
 }
 
-.gallery figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+.gallery::-webkit-scrollbar-thumb:hover {
+    background: rgba(194, 16, 67, 0.8);
 }
 
-.gallery figcaption {
-    max-width: 65ch;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    text-align: center;
+.gallery div {
+    width: 100%;
+    flex: none;
+    margin-right: 30px;
+    transition: transform 0.3s ease;
 }
 
-.gallery img {
-    width: auto;
-    max-height: 560px;
-    border: 1px solid var(--border);
+.gallery div:hover {
+    transform: scale(1.02);
+}
+
+.gallery div img {
+    width: 100%;
+    border: solid;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-width: 5px;
     border-radius: 12px;
+    transition: all 0.3s ease;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-btn {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    padding: 10px;
-    background: var(--accent-soft);
-    border: 1px solid var(--accent-line);
-    border-radius: 50%;
+.gallery div img:hover {
+    border-color: #c21043;
+    box-shadow: 0 12px 32px rgba(194, 16, 67, 0.4);
+    transform: translateY(-5px);
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#backBtn, #nextBtn {
+    width: 50px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    margin: 40px;
+    transition: all 0.3s ease;
+    filter: brightness(0.8);
+    border-radius: 50%;
+    padding: 8px;
+    background: rgba(194, 16, 67, 0.1);
+    border: 1px solid rgba(194, 16, 67, 0.3);
 }
 
-.carousel-btn:hover {
-    transform: scale(1.1);
-    background: rgba(194, 16, 67, 0.3);
-    border-color: var(--accent);
+#backBtn:hover, #nextBtn:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+    background: rgba(194, 16, 67, 0.2);
+    border-color: #c21043;
+    box-shadow: 0 4px 12px rgba(194, 16, 67, 0.4);
 }
 
-.carousel-btn img {
-    width: 100%;
-    height: auto;
-    border: none;
-    box-shadow: none;
+#backBtn:active, #nextBtn:active {
+    transform: scale(1.05);
 }
 
-.carousel-hint {
-    margin-top: 8px;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    text-align: center;
+.gallery div:last-child {
+    margin-right: 0;
 }
 
-/* Phones: image takes the full width, arrows sit underneath it. */
-@media screen and (max-width: 697px) {
-    .gallery-wrap {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px 20px;
+/* Smooth scrolling animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
     }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
+.gallery div {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Enhanced mobile responsiveness */
+@media screen and (max-width: 768px) {
     .gallery {
-        grid-column: 1 / -1;
-        grid-row: 1;
+        width: 300px;
     }
 
-    .carousel-btn {
-        grid-row: 2;
+    #backBtn, #nextBtn {
         width: 40px;
-        height: 40px;
-        padding: 8px;
+        margin: 20px;
     }
 
-    .carousel-btn--prev {
-        justify-self: end;
+    .gallery-wrap {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        width: 250px;
+        margin-bottom: 30px;
     }
 
-    .carousel-btn--next {
-        justify-self: start;
+    #backBtn, #nextBtn {
+        width: 35px;
+        margin: 15px;
+        padding: 5px;
     }
 
-    .gallery img {
-        max-height: 420px;
+    .gallery div img {
+        border-width: 3px;
     }
 }

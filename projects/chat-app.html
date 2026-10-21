@@ -1,133 +1,93 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-    <title>Full-stack Chat App · Dominick George</title>
-    <meta name="description" content="Full-stack chat app with React, Node.js/Express and MongoDB, using bcrypt password hashing and JWT authentication.">
-    <meta name="author" content="Dominick George">
-    <link rel="canonical" href="https://domgeorge.dev/projects/chat-app.html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Dominick George">
-    <meta property="og:title" content="Full-stack Chat App · Dominick George">
-    <meta property="og:description" content="Full-stack chat app with React, Node.js/Express and MongoDB, using bcrypt password hashing and JWT authentication.">
-    <meta property="og:url" content="https://domgeorge.dev/projects/chat-app.html">
-    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#c21043">
-    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link href="/static/styles/base.css" rel="stylesheet">
-    <link href="/static/styles/carousel.css" rel="stylesheet">
-    <link href="/static/styles/projects.css" rel="stylesheet">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="header">
-        <nav class="navbar" aria-label="Main">
-            <a href="/" class="logo">Dominick George</a>
-            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-            </button>
-            <div class="menu" id="primaryMenu">
-                <ul class="navbar-links-list">
-                    <li><a href="/" class="url-link">Home</a></li>
-                    <li><a href="/about.html" class="url-link">About</a></li>
-                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
-                    <li><a href="/cv.html" class="url-link">CV</a></li>
-                    <li><a href="/contact.html" class="url-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main id="main" class="page-contents">
-        <article class="container case-study">
-            <a class="back-link" href="/projects.html">&larr; All projects</a>
-
-            <header class="case-header fade-in-up">
-                <p class="eyebrow">Full-stack &middot; Personal project</p>
-                <h1 class="page-title">Full-stack Chat App</h1>
-                <p class="lead">
-                    A full-stack chat app where registered users find each other and message one another. I built it to
-                    learn a modern JavaScript stack end to end.
-                </p>
-                <ul class="languages-list">
-                    <li class="languages-list-item">React</li>
-                    <li class="languages-list-item">Vite</li>
-                    <li class="languages-list-item">Node.js</li>
-                    <li class="languages-list-item">Express</li>
-                    <li class="languages-list-item">Mongoose</li>
-                    <li class="languages-list-item">MongoDB Atlas</li>
-                    <li class="languages-list-item">JWT</li>
-                </ul>
-                <div class="btn-row">
-                    <a class="btn btn--ghost" href="https://github.com/dominick-george-dev/NodeJS-Realtime-Chat"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg> View code on GitHub</a>
+<html lang="en">
+    <head>
+        <title>Full Stack Chat App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="../static/styles/base.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../static/imgs/cv_logo.png" type="image/x-icon"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
+        <link href="../static/styles/carousel.css" rel="stylesheet" type="text/css">
+        <link href="../static/styles/projects.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <p class="logo-text">Dominick George</p>
                 </div>
-            </header>
 
-            <div class="case-media">
+                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
+
+                <div class="menu">
+                    <ul class="navbar-links-list">
+                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
+                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
+                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
+                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
+                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="page-contents">
+            <div class="main-container">
+
+                <h1 class="projects-title">Full Stack Chat App</h1>
+            
                 <div class="gallery-wrap">
-                    <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Previous screenshot"><img src="/static/imgs/back.png" alt="" width="90" height="90"></button>
-                    <div class="gallery" tabindex="0" aria-label="Screenshots (scrollable)">
-                        <div><img src="/static/imgs/chat-app-1.webp" alt="ChatApp login page with email and password fields." width="1400" height="631" decoding="async"></div>
-                        <div><img src="/static/imgs/chat-app-2.webp" alt="ChatApp registration page with name, email and password fields." width="1400" height="631" decoding="async" loading="lazy"></div>
+                    <img src="../static/imgs/back.png" id="backBtn">
+                    <div class="gallery">
+                        <div>
+                            <img src="../static/imgs/chat_app_1.PNG" class="project-img" width="1000px" height="500px" alt="Initial picture of my login application with user1 details entered and a pop-up prompting the user for their 2FA code.">
+                        </div>
+                        <div>
+                            <img src="../static/imgs/chat_app_2.PNG" class="project-img" width="300px" height="500px" alt="Pop-up telling the user that they successfully setup 2FA on their account.">
+                        </div>
                     </div>
-                    <button type="button" class="carousel-btn carousel-btn--next" aria-label="Next screenshot"><img src="/static/imgs/next.png" alt="" width="90" height="90"></button>
+                    <img src="../static/imgs/next.png" id="nextBtn">
+                </div>
+            
+                <div class="project-overview-container">
+            
+                    <p class="project-text">
+                        To become a modern software developer I wanted to ensure I understood modern web frameworks. This is why I decided to create this project to be able to apply my knowedge of React and Node.js. It was tricky to begin with but after some research it came to me quite naturally. I struggled with understanding how to create an initial project structure but after some research it was done. After the initial struggles it was developed like any other full stack project. I am proud of this project as it is a good example of my ability to learn new technologies and apply them to a project. Additionally, I was able to incorporate a new database technology, MongoDB, into this project. This was exciting as it broadened my ability to create a secure cloud based database which is more realistic to real world applications.
+                    </p>
+            
+                    <div class="git-link-container">
+                        <a class="git-link" href="https://github.com/Domisalej6921/NodeJS-Realtime-Chat">Github Project Link</a><br>
+                    </div>
+            
+                    <p class="languages-list-label">Languages used during the development of this project: </p>
+            
+                    <ul class="languages-list">
+                        <li class="languages-list-item">React</li>
+                        <li class="languages-list-item">NodeJS</li>
+                        <li class="languages-list-item">MongoDB</li>
+                    </ul>
                 </div>
             </div>
-
-            <section class="case-section" aria-labelledby="overview-heading">
-                <h2 id="overview-heading">Overview</h2>
-                <p>
-                    The React front end (built with Vite, React Router and React Bootstrap) talks to a Node.js/Express
-                    REST API for accounts, chats and messages, with app-wide state held in React context. Users, chats and
-                    messages live in a MongoDB Atlas cloud database via Mongoose models.
-                </p>
-                <p>
-                    The hardest part was the start: working out how to structure a project with a separate client and
-                    server. After that it came together like any other full-stack build, and it gave me hands-on experience
-                    with a document database alongside the SQL databases I'd used before.
-                </p>
-            </section>
-
-            <section class="case-section" aria-labelledby="security-heading">
-                <h2 id="security-heading">Security</h2>
-                <ul class="feature-list">
-                    <li><strong>Password hashing:</strong> bcrypt with a per-user salt.</li>
-                    <li><strong>Stateless authentication:</strong> the server signs a JSON Web Token on login that expires after three days.</li>
-                    <li><strong>Server-side validation:</strong> email format and password strength checked with <code>validator.js</code> before an account is created.</li>
-                    <li><strong>Configuration:</strong> the database connection string and JWT signing key are read from environment variables.</li>
+        </main>
+        <footer class="base-footer">
+            <div class="footer-container">
+                <p class="footer-text">Dominick George 2024</p>
+            </div>
+            <div class="contact-info">
+                <ul>
+                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
+                    <li><span class="seperator">/</span></li>
+                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
                 </ul>
-            </section>
-
-            <section class="case-section" aria-labelledby="next-heading">
-                <h2 id="next-heading">What I'd improve next</h2>
-                <ul class="feature-list">
-                    <li>Keep the session token in an <code>httpOnly</code>, <code>SameSite</code> cookie instead of <code>localStorage</code>, so an XSS bug can't steal it.</li>
-                    <li>Push new messages instantly over WebSockets (Socket.IO), authenticated with the same token, instead of fetching them over REST.</li>
-                    <li>Require the token on every API route and rate-limit the login endpoint.</li>
-                </ul>
-            </section>
-        </article>
-    </main>
-    <footer class="base-footer">
-        <div class="footer-inner">
-            <p class="footer-text">&copy; 2026 Dominick George</p>
-            <ul class="footer-links">
-                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
-                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="/static/js/main.js"></script>
-    <script src="/static/js/carousel.js"></script>
-</body>
+            </div>
+        </footer>
+        <script src="../static/js/project_img_slider.js"></script>
+        <script src="../static/js/main.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
+    </body>
 </html>
