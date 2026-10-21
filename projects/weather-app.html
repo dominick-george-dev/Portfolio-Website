@@ -1,103 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Weather App</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link href="../static/styles/base.css" rel="stylesheet" type="text/css">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="icon" href="../static/imgs/cv_logo.png" type="image/x-icon"/>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.60/css/all.min.css">
-        <link href="../static/styles/carousel.css" rel="stylesheet" type="text/css">
-        <link href="../static/styles/projects.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <header class="header">
-            <nav class="navbar">
-                <div class="logo">
-                    <p class="logo-text">Dominick George</p>
-                </div>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Weather App · Dominick George</title>
+    <meta name="description" content="JavaScript weather app using the OpenWeather API.">
+    <meta name="author" content="Dominick George">
+    <link rel="canonical" href="https://domgeorge.dev/projects/weather-app.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Dominick George">
+    <meta property="og:title" content="Weather App · Dominick George">
+    <meta property="og:description" content="JavaScript weather app using the OpenWeather API.">
+    <meta property="og:url" content="https://domgeorge.dev/projects/weather-app.html">
+    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#c21043">
+    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <link href="/static/styles/carousel.css" rel="stylesheet">
+    <link href="/static/styles/projects.css" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar" aria-label="Main">
+            <a href="/" class="logo">Dominick George</a>
+            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+            <div class="menu" id="primaryMenu">
+                <ul class="navbar-links-list">
+                    <li><a href="/" class="url-link">Home</a></li>
+                    <li><a href="/about.html" class="url-link">About</a></li>
+                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
+                    <li><a href="/cv.html" class="url-link">CV</a></li>
+                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="page-contents">
+        <article class="container case-study">
+            <a class="back-link" href="/projects.html">&larr; All projects</a>
 
-                <button aria-label="toggle-menu"  id="responsiveMenuToggleButton" class="menu-toggle-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                </button>
-
-                <div class="menu">
-                    <ul class="navbar-links-list">
-                        <li class="navbar-link"><a href="/" class="url-link">Home</a></li>
-                        <li class="navbar-link"><a href="/about.html" class="url-link">About</a></li>
-                        <li class="navbar-link"><a href="/cv.html" class="url-link">CV</a></li>
-                        <li class="navbar-link"><a href="/projects.html" class="url-link">Projects</a></li>
-                        <li class="navbar-link"><a href="/contact.html" class="url-link">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="page-contents">
-            <div class="main-container">
-
-                <h1 class="projects-title">Weather App</h1>
-            
-                <div class="gallery-wrap">
-                    <img src="../static/imgs/back.png" id="backBtn">
-                    <div class="gallery">
-                        <div>
-                            <img src="../static/imgs/weather_app_1.PNG" class="project-img" width="1000px" height="700px" alt="The initial page you are given when running the app.">
-                        </div>
-                        <div>
-                            <img src="../static/imgs/weather_app_2.PNG" class="project-img" width="100px" height="900px" alt="The weather dashboard provided for each city which lists (temp, location, humidity, windspeed, weather)">
-                        </div>
-                        <div>
-                            <img src="../static/imgs/weather_app_3.PNG" class="project-img" width="200px" height="900px" alt="Same as the previous image with a different location (California).">
-                        </div>
-                        <div>
-                            <img src="../static/imgs/weather_app_4.PNG" class="project-img" width="850px" height="900px" alt="Same as the previous image with a different location (Saint Petersburg).">
-                        </div>
-                        <div>
-                            <img src="../static/imgs/weather_app_5.PNG" class="project-img" width="850px" height="800px" alt="An overview of the javascript which is executed in the program.">
-                        </div>
-                    </div>
-                    <img src="../static/imgs/next.png" id="nextBtn">
-                </div>
-
-                <div class="project-overview-container">
-            
-                    <p class="project-text">
-                        A beginner project in which I aimed to improve my Javascript ability. This was a fun project to develop as I used the Open Weather API to gather the data to use. This made it a simple task of altering the HTML elements depending on what the response received. The CSS was also quite a nice addition of this project which makes me proud of this project.
-                    </p>
-                </div>
-            
-                <div class="git-link-container">
-                    <a class="git-link" href="https://github.com/Domisalej6921/Weather-App">Github Project Link</a><br>
-                </div>
-        
-                <p class="languages-list-label">Languages used during the development of this project: </p>
-        
+            <header class="case-header fade-in-up">
+                <p class="eyebrow">JavaScript &middot; API &middot; Personal project</p>
+                <h1 class="page-title">Weather App</h1>
+                <p class="lead">A small JavaScript app I built to strengthen my front-end skills: search for a city and it shows the current temperature, humidity and wind speed from the OpenWeather API.</p>
                 <ul class="languages-list">
+                    <li class="languages-list-item">JavaScript</li>
                     <li class="languages-list-item">HTML</li>
                     <li class="languages-list-item">CSS</li>
-                    <li class="languages-list-item">Javascript</li>
+                    <li class="languages-list-item">REST API</li>
                 </ul>
+                <div class="btn-row">
+                    <a class="btn btn--ghost" href="https://github.com/dominick-george-dev/Weather-App"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg> View code on GitHub</a>
+                </div>
+            </header>
+
+            <div class="case-media">
+                <div class="gallery-wrap">
+                    <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Previous screenshot"><img src="/static/imgs/back.png" alt="" width="90" height="90"></button>
+                    <div class="gallery" tabindex="0" aria-label="Screenshots (scrollable)">
+                        <div><img src="/static/imgs/weather-app-1.webp" alt="Search box asking for a city name." width="695" height="363" decoding="async"></div>
+                        <div><img src="/static/imgs/weather-app-2.webp" alt="Weather card for Cardiff: 12°C and partly cloudy, with 93% humidity and 6.17 km/h wind." width="506" height="608" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/weather-app-3.webp" alt="Weather card for California: 21°C and sunny, with 67% humidity." width="660" height="684" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/weather-app-4.webp" alt="Weather card for Saint Petersburg: 9°C with snow, and 77% humidity." width="624" height="649" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/weather-app-5.webp" alt="The JavaScript that calls the OpenWeather API with async/await, handles a 404 for unknown cities and updates the page." width="688" height="799" decoding="async" loading="lazy"></div>
+                    </div>
+                    <button type="button" class="carousel-btn carousel-btn--next" aria-label="Next screenshot"><img src="/static/imgs/next.png" alt="" width="90" height="90"></button>
+                </div>
+                <p class="carousel-hint">5 screenshots: use the arrows or scroll sideways.</p>
             </div>
-        </main>
-        <footer class="base-footer">
-            <div class="footer-container">
-                <p class="footer-text">Dominick George 2024</p>
-            </div>
-            <div class="contact-info">
-                <ul>
-                    <li><a href="tel:+447727290359" class="phone-no">(UK)+44 7727 290359</a></li>
-                    <li><span class="seperator">/</span></li>
-                    <li><a href="mailto:dominickgeorge21@gmail.com" class="email-link">dominickgeorge21@gmail.com</a></li>
-                </ul>
-            </div>
-        </footer>
-        <script src="../static/js/project_img_slider.js"></script>
-        <script src="../static/js/main.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://kit.fontawesome.com/695add4257.js" crossorigin="anonymous"></script>
-    </body>
+
+            <section class="case-section" aria-labelledby="section-1">
+                <h2 id="section-1">How it works</h2>
+                <p>An <code>async</code> fetch requests the city's weather from the OpenWeather API, shows an error message for unknown cities, then updates the page and swaps the weather icon to match the conditions (clouds, clear, rain, drizzle, mist or snow).</p>
+            </section>
+        </article>
+    </main>
+    <footer class="base-footer">
+        <div class="footer-inner">
+            <p class="footer-text">&copy; 2026 Dominick George</p>
+            <ul class="footer-links">
+                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
+                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/carousel.js"></script>
+</body>
 </html>
