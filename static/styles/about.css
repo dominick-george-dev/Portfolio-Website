@@ -1,8 +1,18 @@
+/* Desktop: text on the left; headshot then photo carousel in the right column.
+   Smaller screens: headshot first, then the text, then the carousel. */
 .about-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 360px;
-    gap: 64px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "content headshot"
+        "content photos";
+    gap: 32px 64px;
     align-items: start;
+}
+
+.about-content {
+    grid-area: content;
 }
 
 .about-section {
@@ -79,20 +89,9 @@
     text-transform: uppercase;
 }
 
-.interest-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Photo column */
-.about-photos {
-    position: sticky;
-    top: calc(var(--header-height) + 24px);
-}
-
+/* Headshot */
 .about-headshot {
-    margin-bottom: 32px;
+    grid-area: headshot;
 }
 
 .about-headshot img {
@@ -102,8 +101,11 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-.about-photos .gallery img {
-    max-height: 380px;
+/* Photo carousel: arrows sit under the photo so it can use the column's full width */
+.about-photos {
+    grid-area: photos;
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
 }
 
 .about-photos-label {
@@ -116,10 +118,45 @@
     text-transform: uppercase;
 }
 
+.about-photos .gallery-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+
+.about-photos .gallery {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.about-photos .carousel-btn {
+    grid-row: 2;
+}
+
+.about-photos .carousel-btn--prev {
+    justify-self: end;
+}
+
+.about-photos .carousel-btn--next {
+    justify-self: start;
+}
+
+.about-photos .gallery img {
+    max-height: 460px;
+}
+
 @media screen and (max-width: 960px) {
     .about-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "headshot"
+            "content"
+            "photos";
         gap: 40px;
+    }
+
+    .about-headshot {
+        max-width: 280px;
     }
 
     .about-photos {

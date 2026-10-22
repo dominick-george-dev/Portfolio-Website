@@ -63,6 +63,31 @@ if (menu) {
         }
     });
 
+    // Touch: a vertical swipe turns the wheel like the scroll wheel does. Taps still follow links.
+    const swipeStep = 40;
+    let touchY = null;
+    let touchDelta = 0;
+    menu.addEventListener('touchstart', (e) => {
+        touchY = e.touches[0].clientY;
+        touchDelta = 0;
+    }, { passive: true });
+    menu.addEventListener('touchmove', (e) => {
+        if (touchY === null) {
+            return;
+        }
+        const y = e.touches[0].clientY;
+        touchDelta += touchY - y;
+        touchY = y;
+        if (Math.abs(touchDelta) >= swipeStep) {
+            rotate(touchDelta > 0 ? 1 : -1);
+            touchDelta = 0;
+        }
+        e.preventDefault();
+    }, { passive: false });
+    menu.addEventListener('touchend', () => {
+        touchY = null;
+    });
+
     // Keyboard: arrow keys turn the wheel and keep focus on the front item.
     menu.addEventListener('keydown', (e) => {
         if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') {
