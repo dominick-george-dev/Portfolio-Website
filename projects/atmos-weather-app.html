@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Atmos Weather App · Dominick George</title>
+    <meta name="description" content="Kotlin Android app showing live weather for your location or any city via OpenWeatherMap, with activity suggestions, French translation and tests.">
+    <meta name="author" content="Dominick George">
+    <link rel="canonical" href="https://domgeorge.dev/projects/atmos-weather-app.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Dominick George">
+    <meta property="og:title" content="Atmos Weather App · Dominick George">
+    <meta property="og:description" content="Kotlin Android app showing live weather for your location or any city via OpenWeatherMap, with activity suggestions, French translation and tests.">
+    <meta property="og:url" content="https://domgeorge.dev/projects/atmos-weather-app.html">
+    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#c21043">
+    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <link href="/static/styles/carousel.css" rel="stylesheet">
+    <link href="/static/styles/projects.css" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar" aria-label="Main">
+            <a href="/" class="logo">Dominick George</a>
+            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+            <div class="menu" id="primaryMenu">
+                <ul class="navbar-links-list">
+                    <li><a href="/" class="url-link">Home</a></li>
+                    <li><a href="/about.html" class="url-link">About</a></li>
+                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
+                    <li><a href="/cv.html" class="url-link">CV</a></li>
+                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="page-contents">
+        <article class="container case-study">
+            <a class="back-link" href="/projects.html">&larr; All projects</a>
+
+            <header class="case-header fade-in-up">
+                <p class="eyebrow">Android &middot; Kotlin &middot; University assessment</p>
+                <h1 class="page-title">Atmos Weather App</h1>
+                <p class="lead">
+                    An Android weather app I built in Kotlin for a second-year Mobile Development assessment. It finds
+                    your location, pulls live conditions from the OpenWeatherMap API, suggests something to do based on
+                    the weather and asks you to rate how accurate the prediction was.
+                </p>
+                <ul class="languages-list">
+                    <li class="languages-list-item">Kotlin</li>
+                    <li class="languages-list-item">Android</li>
+                    <li class="languages-list-item">Retrofit</li>
+                    <li class="languages-list-item">OpenWeatherMap API</li>
+                    <li class="languages-list-item">Lottie</li>
+                    <li class="languages-list-item">AndroidX Test</li>
+                </ul>
+                <div class="btn-row">
+                    <a class="btn btn--ghost" href="https://github.com/dominick-george-dev/Mobile-Weather-App"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg> View code on GitHub</a>
+                </div>
+            </header>
+
+            <div class="case-media">
+                <div class="gallery-wrap">
+                    <button type="button" class="carousel-btn carousel-btn--prev" aria-label="Previous screenshot"><img src="/static/imgs/back.png" alt="" width="90" height="90"></button>
+                    <section class="gallery" tabindex="0" aria-label="Screenshots (scrollable)">
+                        <div><img src="/static/imgs/atmos-weather-app-1.webp" alt="Main weather screen for Thursday 10th April 2025 showing clear sky and 10.81°C in Mountain View, with a city search box, Atmos Recommends and View More buttons, and a language switch." width="364" height="726" decoding="async"></div>
+                        <div><img src="/static/imgs/atmos-weather-app-2.webp" alt="The main screen after searching for Cardiff: clear sky and 11.88°C, with the icon changed to a sun." width="364" height="726" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/atmos-weather-app-3.webp" alt="Recommendation screen with an animated sun, the suggestion 'It's a clear day! How about going for a walk or a picnic?' and a five-star rating bar with three stars selected." width="364" height="726" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/atmos-weather-app-4.webp" alt="Full weather screen with a sun icon and cards for clear sky, Mountain View, 10.81°C, 3.09 m/s wind and 88% humidity." width="364" height="650" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/atmos-weather-app-5.webp" alt="The main screen switched to French, with 'Entrez un emplacement', 'Atmos recommande ?', 'Voir plus' and 'Changer de langue ?', showing 14.97°C in Paris." width="364" height="726" decoding="async" loading="lazy"></div>
+                        <div><img src="/static/imgs/atmos-weather-app-6.webp" alt="Android's prompt asking whether Atmos Weather App can access precise or approximate location, above a message explaining that location is needed to fetch weather data." width="364" height="726" decoding="async" loading="lazy"></div>
+                    </section>
+                    <button type="button" class="carousel-btn carousel-btn--next" aria-label="Next screenshot"><img src="/static/imgs/next.png" alt="" width="90" height="90"></button>
+                </div>
+                <p class="carousel-hint">6 screenshots: use the arrows or scroll sideways.</p>
+            </div>
+
+            <section class="case-section" aria-labelledby="overview-heading">
+                <h2 id="overview-heading">How it works</h2>
+                <p>
+                    After a welcome screen, the app reads the device's last known location and calls OpenWeatherMap's
+                    current-weather endpoint through a Retrofit interface, with Gson mapping the JSON into Kotlin data
+                    classes. From the main screen you can search for another city, open a full-details view or ask for a
+                    recommendation, with a short Lottie loading animation between screens. No network, a failed API
+                    response or an unavailable location are caught and shown as a short message instead of crashing the
+                    app.
+                </p>
+                <p>
+                    I used ConstraintLayout for flat, responsive layouts, View Binding instead of
+                    <code>findViewById</code>, and SharedPreferences for the small amount of data the app keeps.
+                </p>
+            </section>
+
+            <section class="case-section" aria-labelledby="role-heading">
+                <h2 id="role-heading">My role</h2>
+                <p>
+                    This was a solo project. Alongside the app I wrote the project overview, its functional and
+                    non-functional requirements, a justification of the Android APIs I chose and a retrospective,
+                    revising the early drafts after feedback from the module staff. I built it feature by feature over
+                    about seven weeks, from February to April 2025, in the module's GitLab repository.
+                </p>
+            </section>
+
+            <section class="case-section" aria-labelledby="features-heading">
+                <h2 id="features-heading">Key features</h2>
+                <ul class="feature-list">
+                    <li><strong>Weather for where you are:</strong> current conditions, temperature and place name for the device's location.</li>
+                    <li><strong>City search:</strong> type any city to load its weather, with the icon changed to match the conditions.</li>
+                    <li><strong>Activity suggestions:</strong> &ldquo;Atmos Recommends&rdquo; turns clear, cloudy, drizzly, rainy, snowy or windy weather into an idea for the day, with a matching animation.</li>
+                    <li><strong>Forecast rating:</strong> a five-star bar for how accurate the prediction was, saved with a timestamp and cleared after 24 hours so you can rate the next day's weather.</li>
+                    <li><strong>Full weather view:</strong> date, time, location, temperature, wind speed and humidity on one screen.</li>
+                    <li><strong>French translation</strong> of the interface, switched in the app with a toggle.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="privacy-heading">
+                <h2 id="privacy-heading">Privacy &amp; permissions</h2>
+                <ul class="feature-list">
+                    <li><strong>Location only while the app is in use:</strong> requested at runtime, with no background-location permission. If it's refused, the app explains why it needs it instead of failing silently.</li>
+                    <li><strong>No continuous tracking:</strong> each weather screen reads the fused location provider's last known position once, which also saves battery.</li>
+                    <li><strong>Coordinates aren't stored:</strong> they're sent only to OpenWeatherMap, over HTTPS, and never saved on the device.</li>
+                    <li><strong>Minimal local data:</strong> just the language choice and the forecast rating, in app-private SharedPreferences.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="testing-heading">
+                <h2 id="testing-heading">Testing</h2>
+                <p>
+                    I wrote 15 instrumented tests with AndroidX Test and JUnit across the three main screens. They check
+                    that each screen launches and shows the date and time, that the language switch saves its choice,
+                    that the right recommendation appears for a given, missing or unrecognised weather type, and that
+                    ratings save and load correctly.
+                </p>
+            </section>
+
+            <section class="case-section" aria-labelledby="next-heading">
+                <h2 id="next-heading">What I'd improve next</h2>
+                <ul class="feature-list">
+                    <li>Add the multi-day forecast. It was in my requirements, but I didn't get to it.</li>
+                    <li>Match recommendations on OpenWeatherMap's numeric condition codes rather than words in the description. At the moment anything unrecognised, such as fog or haze, gets the clear-day suggestion. I'd also pass the weather data between screens rather than the text of a label.</li>
+                    <li>Move the API and location code into a shared repository and ViewModel. Both weather screens duplicate it now, and View More always shows your own location even after you've searched for a city.</li>
+                    <li>Re-apply the saved language when the app starts, and move the remaining hard-coded messages into string resources so they're translated too.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer class="base-footer">
+        <div class="footer-inner">
+            <p class="footer-text">&copy; 2026 Dominick George</p>
+            <ul class="footer-links">
+                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
+                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/carousel.js"></script>
+</body>
+</html>

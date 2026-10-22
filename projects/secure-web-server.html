@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Secure Web Server · Dominick George</title>
+    <meta name="description" content="Python client and server that agree an AES key over TCP with a Diffie–Hellman key exchange, validate the public parameters and encrypt traffic in both directions.">
+    <meta name="author" content="Dominick George">
+    <link rel="canonical" href="https://domgeorge.dev/projects/secure-web-server.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Dominick George">
+    <meta property="og:title" content="Secure Web Server · Dominick George">
+    <meta property="og:description" content="Python client and server that agree an AES key over TCP with a Diffie–Hellman key exchange, validate the public parameters and encrypt traffic in both directions.">
+    <meta property="og:url" content="https://domgeorge.dev/projects/secure-web-server.html">
+    <meta property="og:image" content="https://domgeorge.dev/static/imgs/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dominick George, software engineer focused on secure full-stack development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#c21043">
+    <link rel="icon" href="/static/imgs/cv_logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="/static/styles/base.css" rel="stylesheet">
+    <link href="/static/styles/projects.css" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar" aria-label="Main">
+            <a href="/" class="logo">Dominick George</a>
+            <button type="button" id="responsiveMenuToggleButton" class="menu-toggle-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="open-icon" aria-hidden="true" focusable="false"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="close-icon" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+            <div class="menu" id="primaryMenu">
+                <ul class="navbar-links-list">
+                    <li><a href="/" class="url-link">Home</a></li>
+                    <li><a href="/about.html" class="url-link">About</a></li>
+                    <li><a href="/projects.html" class="url-link" aria-current="true">Projects</a></li>
+                    <li><a href="/cv.html" class="url-link">CV</a></li>
+                    <li><a href="/contact.html" class="url-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="page-contents">
+        <article class="container case-study">
+            <a class="back-link" href="/projects.html">&larr; All projects</a>
+
+            <header class="case-header fade-in-up">
+                <p class="eyebrow">Security &middot; Cryptography &middot; Lab work</p>
+                <h1 class="page-title">Secure Web Server</h1>
+                <p class="lead">
+                    A Python client and server that agree a secret key over the network with a Diffie&ndash;Hellman key
+                    exchange, then use it to encrypt the messages they send each other with AES. It started as a basic
+                    HTTP server, and I'm hardening it one lab at a time on the way to a properly secure web server.
+                </p>
+                <ul class="languages-list">
+                    <li class="languages-list-item">Python</li>
+                    <li class="languages-list-item">TCP sockets</li>
+                    <li class="languages-list-item">Diffie&ndash;Hellman</li>
+                    <li class="languages-list-item">AES</li>
+                    <li class="languages-list-item">PyCryptodome</li>
+                </ul>
+                <div class="btn-row">
+                    <a class="btn btn--ghost" href="https://github.com/dominick-george-dev/Secure-Web-Server"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg> View code on GitHub</a>
+                </div>
+            </header>
+
+            <figure class="case-media">
+                <img class="project-img" src="/static/imgs/secure-web-server-1.webp" alt="Two terminal windows from one run. The server sends p=7919, g=7 and its public value A; the client replies with its public value B; both print the same shared secret and AES key. The server then sends the encrypted time, which the client decrypts, and the server decrypts the client's encrypted reply." width="1400" height="944" decoding="async">
+                <figcaption>One run with debug output on. Both sides print the same AES key, but only p, g, A and B cross the network.</figcaption>
+            </figure>
+
+            <section class="case-section" aria-labelledby="overview-heading">
+                <h2 id="overview-heading">How it works</h2>
+                <p>
+                    The server (Alice) and client (Bob) talk over a raw TCP socket. Every connection starts with a fresh
+                    key exchange, so no key is ever stored or sent:
+                </p>
+                <ol class="step-list">
+                    <li>The server picks a secret <code>a</code> and sends the public prime <code>p</code>, the generator <code>g</code> and its public value <code>A = g<sup>a</sup> mod p</code>.</li>
+                    <li>The client checks that <code>p</code> is prime and <code>g</code> is a primitive root, and stops if either check fails. It then picks its own secret <code>b</code> and replies with <code>B = g<sup>b</sup> mod p</code>.</li>
+                    <li>Both sides compute the same shared secret (<code>B<sup>a</sup> mod p</code> on the server, <code>A<sup>b</sup> mod p</code> on the client) and hash it with SHA-256 to get a 128-bit AES key.</li>
+                    <li>The server pads the current time, encrypts it and sends it. The client decrypts it and sends back an encrypted acknowledgement, which the server decrypts.</li>
+                </ol>
+            </section>
+
+            <section class="case-section" aria-labelledby="role-heading">
+                <h2 id="role-heading">My role &amp; how it evolved</h2>
+                <p>Solo project: I wrote all of the code. I've built it up through weekly lab exercises, and each step fixed the biggest weakness of the one before:</p>
+                <ul class="feature-list">
+                    <li><strong>Starting point:</strong> an HTTP server on Python's <code>http.server</code> that answered GET with HTML and POST with the time as JSON.</li>
+                    <li><strong>Week 1:</strong> dropped down to raw TCP sockets, with the server sending the time to a new client in plain text.</li>
+                    <li><strong>Week 2:</strong> encrypted both directions with AES-128, using a random key the server wrote to a file for the client to read.</li>
+                    <li><strong>Week 3:</strong> replaced the key file with a Diffie&ndash;Hellman exchange and moved the shared maths into a <code>utils.py</code> module used by both sides.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="features-heading">
+                <h2 id="features-heading">Key features</h2>
+                <ul class="feature-list">
+                    <li>Diffie&ndash;Hellman written from the maths up: a primality test, a primitive-root check and modular exponentiation with Python's three-argument <code>pow()</code>.</li>
+                    <li>AES-128 encryption with PKCS#7 padding in both directions, using PyCryptodome.</li>
+                    <li>One helper module shared by client and server, so both derive the key in exactly the same way.</li>
+                    <li>A socket server that handles clients in turn and sets <code>SO_REUSEADDR</code> so it can restart straight away.</li>
+                    <li>Step-by-step debug output (secrets, padded plaintext and ciphertext in hex) so every stage can be checked by hand.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="security-heading">
+                <h2 id="security-heading">Security</h2>
+                <ul class="feature-list">
+                    <li><strong>No key on the wire:</strong> only the public values <code>p</code>, <code>g</code>, <code>A</code> and <code>B</code> are sent. Each side derives the AES key locally, and the server generates a new secret for every connection, so each session gets its own key.</li>
+                    <li><strong>Secure randomness:</strong> secret values come from Python's <code>secrets</code> module rather than <code>random</code>, whose output can be predicted.</li>
+                    <li><strong>Parameter validation:</strong> the server checks at start-up that <code>p</code> is prime and <code>g</code> is a primitive root. The client re-checks the values it receives instead of trusting the server.</li>
+                    <li><strong>Key derivation:</strong> the shared secret is hashed with SHA-256 and cut to 16 bytes, rather than being used directly as the key.</li>
+                    <li><strong>Secrets kept out of Git:</strong> <code>.gitignore</code> excludes key files, plaintext and ciphertext dumps, certificates, private keys and <code>.env</code> files.</li>
+                </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="next-heading">
+                <h2 id="next-heading">What I'd improve next</h2>
+                <p>This version is built to make the maths visible, not to be deployed. These are the changes I'd make first:</p>
+                <ul class="feature-list">
+                    <li>Replace the 13-bit prime (7919) with a standard 2048-bit group (RFC 3526) or X25519. With a prime this small there are fewer than 8,000 possible keys, so an eavesdropper could try them all in moments.</li>
+                    <li>Swap ECB mode for an authenticated mode such as AES-GCM, so repeated blocks don't show through and tampering is detected. I'd also derive the key with HKDF instead of a bare hash.</li>
+                    <li>Authenticate the key exchange, for example by signing the server's public value. Unauthenticated Diffie&ndash;Hellman is open to a man-in-the-middle.</li>
+                    <li>Remove the debug output that prints secrets, add length-prefixed message framing instead of relying on a single <code>recv(1024)</code>, then put HTTP back on top.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer class="base-footer">
+        <div class="footer-inner">
+            <p class="footer-text">&copy; 2026 Dominick George</p>
+            <ul class="footer-links">
+                <li><a href="mailto:dominickgeorge21@gmail.com">dominickgeorge21@gmail.com</a></li>
+                <li><a href="https://github.com/dominick-george-dev">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/dominick-george-dev/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

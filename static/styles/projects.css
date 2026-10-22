@@ -166,6 +166,12 @@
     text-align: center;
 }
 
+.case-header .walkthrough-note {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
 /* --------------------------------------------------------------------------
    Individual project pages
    -------------------------------------------------------------------------- */
@@ -360,11 +366,6 @@
     border-left: 4px solid var(--accent);
     border-radius: 0 var(--radius) var(--radius) 0;
     color: var(--text-muted);
-}
-
-.case-footer {
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
 }
 
 @media screen and (max-width: 697px) {
